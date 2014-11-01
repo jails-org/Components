@@ -1,4 +1,4 @@
-components - Form AJAX
+Components
 ==========
 
-Component that changes a regular form to an ajax form!
+Jails components page
