@@ -63,10 +63,10 @@ define([ 'jails' ],function(jails){
 			form.trigger( name +'.'+ 'success', result );
 		}
 
-		function error(e){
+		function error(e, exception){
 
 			form.removeClass( loading );
-			form.trigger('name' +'.'+ 'error', e);
+			form.trigger('name' +'.'+ 'error', exception);
 		}
 
 		function off(){
