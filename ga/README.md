@@ -13,7 +13,7 @@
 ## Optionals
 
 | options       |     default      |        values
-|:--------------|:----------------:|:-----------------:
+|:--------------|:----------------:|:-----------------
 | data-ua       |    null          |  `string` UA Code
 | data-debug    |    false         |  `true`, `false`
 
