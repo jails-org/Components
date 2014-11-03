@@ -21,9 +21,9 @@
 
 | Events            |           callback
 |:------------------|:--------------------------|
-| **.on("**form-ajax.success"**)**   | **Function**(`event`, `response`)   |
-| **.on("**form-ajax.error"**)**     | **Function**(`event`, `exception`)  |
-| **.trigger("**form-ajax.post"**)** | Triggers the post event the same as form.submit() |
+| **.on(**"form-ajax.success"**)**   | **Function**(`event`, `response`)   |
+| **.on(**"form-ajax.error"**)**     | **Function**(`event`, `exception`)  |
+| **.trigger(**"form-ajax.post"**)** | Triggers the post event the same as form.submit() |
 
 
 ## Instance Methods
