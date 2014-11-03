@@ -1,29 +1,5 @@
 define([ 'jails' ],function(jails){
 
-	/*
-		@Component <Form Ajax>
-
-		@Description
-			This component sets ajax behavior to a form
-			and extends it with new events.
-
-		@Attributes
-			data-service	<String>
-			data-method		<String> - Default :"get" [get, post, getScript, getJSON]
-			data-loading	<String> - Default :"loading"
-
-		@Events
-			form-ajax.success
-			form-ajax.error
-
-		@Triggers
-			form-ajax.post
-			form-ajax.off
-
-		@Example
-			<form data-service="/my/rest/" data-method="post" />
-	*/
-
 	jails.component('form-ajax', function(form){
 
 		var
