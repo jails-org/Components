@@ -16,5 +16,9 @@
 ---
 
 > ## Social
-*
-[fb-connect](//github.com/jails-scaffold/Components/tree/master/fb-connect "Facebook Connect Component")
+* [fb-connect](//github.com/jails-scaffold/Components/tree/master/fb-connect "Facebook Connect Component")
+
+---
+
+> ## DOM
+* [selectable](//github.com/jails-scaffold/Components/tree/master/selectable "Selectable Component")
