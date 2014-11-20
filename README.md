@@ -12,3 +12,9 @@
 
 > ## Tracking
 * [ga](//github.com/jails-scaffold/Components/tree/master/ga "Google Analytics Component")
+
+---
+
+> ## Social
+*
+[fb-connect](//github.com/jails-scaffold/Components/tree/master/fb-connect "Facebook Connect Component")
