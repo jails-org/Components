@@ -15,6 +15,14 @@ define(['jails'],function( jails ){
 			form.on('submit', send( action ));
 		};
 
+		this.serialize = function(){
+			return form.serialize();
+		};
+
+		this.params = function(){
+			return get_params(form.get(0));
+		};
+
 		function send(action){
 
 			return function(e){

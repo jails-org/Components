@@ -4,31 +4,16 @@
 
 ---
 
-### Markup
-
-```html
-<form data-component="submitter" data-emit="save">
-    (...)
-</form>
-```
-
-## Optionals
-
-| options                |     default      |        values
-|:--------------         |:----------------:|:-----------------
-| data-serialize         |    `false`         |  `true` to send form serialized, `false` to omit it.
-| data-params            |    `false`         |  `true` to send form data as an object, `false` to omit it.
-
 ## Usage
 
 Every time form is submitted it will emit the `login` message.
 
 ```html
 <form
-    data-component="submitter" data-emit="save"
+    data-component="submitter" data-emit="login"
     data-params="true"
     data-serialize="true">
-(...)
+    (...)
 </form>
 
 ```
@@ -47,3 +32,19 @@ function log(e, data){
     //params :{ name :'eduardo', lastname :'ottaviani'}
 }
 ```
+
+## Optionals
+
+| options                |     default      |        values
+|:--------------         |:----------------:|:-----------------
+| data-serialize         |    `false`         |  `true` to send form serialized, `false` to omit it.
+| data-params            |    `false`         |  `true` to send form data as an object, `false` to omit it.
+
+
+## Methods
+
+### .params() : `Object`
+Get the hash of form's elements.
+
+### .serialize() : `String`
+Get the form serialized.
