@@ -36,13 +36,13 @@ define([ 'jails' ],function(jails){
 		function success(result){
 
 			form.removeClass( loading );
-			form.trigger( name +'.'+ 'success', result );
+			_self.emit('success', result);
 		}
 
 		function error(e, exception){
 
 			form.removeClass( loading );
-			form.trigger('name' +'.'+ 'error', exception);
+			_self.emit('error', exception);
 		}
 
 		function off(){
