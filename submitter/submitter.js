@@ -42,7 +42,7 @@ define(['jails'],function( jails ){
 	function get_params(f){
 		var p = {}, elements = f.elements;
 
-		$(elements).each(function(){
+		$.each(elements, function(){
 			if(this.name) p[this.name] = this.value;
 		});
 

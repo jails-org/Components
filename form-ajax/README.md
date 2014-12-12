@@ -21,8 +21,8 @@
 
 | Events            |           callback
 |:------------------|:--------------------------|
-| **listen(**"form-ajax:success"**)**   | **Function**(`event`, `response`)   |
-| **listen(**"form-ajax.error"**)**     | **Function**(`event`, `exception`)  |
+| **emit(**"form-ajax:success"**)**   | **Function**(`event`, `response`)   |
+| **emit(**"form-ajax:error"**)**     | **Function**(`event`, `exception`)  |
 | **.trigger(**"form-ajax:post"**)** | Triggers the post event the same as form.submit() |
 
 
