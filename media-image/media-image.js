@@ -21,7 +21,6 @@ define([
 			change();
 		};
 
-
 		function change(){
 
 			var w = document.body.clientWidth;
