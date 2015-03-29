@@ -23,3 +23,6 @@
 > ## DOM
 * [selectable](//github.com/jails-scaffold/Components/tree/master/selectable "Selectable Component")
 * [submitter](//github.com/jails-scaffold/Components/tree/master/submitter "Submitter Component")
+* [media-image](//github.com/jails-scaffold/Components/tree/master/media-image "Media Image Component")
+
+---
