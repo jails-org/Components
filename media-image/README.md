@@ -10,6 +10,13 @@
 <img data-component="media-image" data-src="http://my/image/url.ext" data-media-min="400" data-media-max="800" />
 ```
 
+### Annotations
+
+```html
+<!-- @media-image({ src:String, max :Number, min :Number }) -->
+<img data-component="media-image" />
+```
+
 ## Optionals
 
 | options       |     default      |        values

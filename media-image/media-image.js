@@ -4,18 +4,19 @@ define([
 
 ], function( jails ){
 
-	jails.component('media-image', function(html, data){
+	jails.component('media-image', function(image, ann){
 
-		var cp = this, min, max, css;
+		var cp = this, min, max, src, css;
 
 		min = 0;
-		max = screen.width;
+		max = Infinity;
 
 		this.init = function(){
 
-			min = +( html.data('media-min') || min );
-			max = +( html.data('media-max') || max );
-			css = html.data('media-css') || 'show';
+			min = +( ann.min || image.data('media-min') || min );
+			max = +( ann.max || image.data('media-max') || max );
+			css = ann.css || image.data('media-css') || 'show';
+			src = ann.src || image.data('src');
 
 			$(window).resize( change );
 			change();
@@ -26,9 +27,9 @@ define([
 			var w = document.body.clientWidth;
 
 			if( w >= min && w <= max )
-				html.prop('src', html.data('src')).addClass(css);
+				image.prop('src', src).addClass(css);
 			else
-				html.prop('src', '').removeClass(css);
+				image.prop('src', '').removeClass(css);
 		}
 
 	});

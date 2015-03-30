@@ -8,6 +8,8 @@
 
 Every time form is submitted it will emit the `login` message.
 
+## Markup
+
 ```html
 <form
     data-component="submitter" data-emit="login"
@@ -17,6 +19,25 @@ Every time form is submitted it will emit the `login` message.
 </form>
 
 ```
+
+## Annotations
+
+```html
+<!-- @submitter({ emit :String, params :Boolean, serialize :Boolean }) -->
+<form
+    data-component="submitter" >
+    (...)
+</form>
+```
+
+## Optionals
+
+| options                |     default      |        values
+|:--------------         |:----------------:|:-----------------
+| data-serialize         |    `false`         |  `true` to send form serialized, `false` to omit it.
+| data-params            |    `false`         |  `true` to send form data as an object, `false` to omit it.
+
+## Usage
 
 ```js
 //My App/Controller/View
@@ -32,19 +53,3 @@ function log(e, data){
     //params :{ name :'eduardo', lastname :'ottaviani'}
 }
 ```
-
-## Optionals
-
-| options                |     default      |        values
-|:--------------         |:----------------:|:-----------------
-| data-serialize         |    `false`         |  `true` to send form serialized, `false` to omit it.
-| data-params            |    `false`         |  `true` to send form data as an object, `false` to omit it.
-
-
-## Methods
-
-### .params() : `Object`
-Get the hash of form's elements.
-
-### .serialize() : `String`
-Get the form serialized.

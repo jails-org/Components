@@ -1,33 +1,34 @@
-define([
+define(['jails'],function( jails ){
 
-	'jails'
-
-],function( jails ){
-
-	jails.component('ga', function(html){
+	jails.component('ga', function(html, ann){
 
 		var _self = this, ua, mode, name;
 
 		this.init = function(){
 
 			name	= this.name;
-			ua		= html.data('ua');
-			mode	= html.data('debug')? 'dev' :'prod';
+			ua		= ann.ua || html.data('ua');
+			mode	= ann.debug || html.data('debug')? 'dev' :'prod';
 
 			sniplet();
 			create();
+
+			this.listen('ga', _ga);
+			this.listen('ga-mode', _mode);
 		};
 
-		this.ga = function(){
+		function _ga(){
 
-			if(mode == 'prod') ga.apply(null, arguments);
+			var args = Array.prototype.slice.call( arguments );
+				args.shift();
+
+			if(mode == 'prod') ga.apply(null, args);
 			if(mode == 'dev'){
-				var args = Array.prototype.slice.call( arguments );
-				console.log.apply(console, [name+' ->'].concat(arguments));
+				console.log.apply(console, [name+' ->'].concat(args));
 			}
-		};
+		}
 
-		this.mode = function(type){
+		function _mode(e, type){
 
 			if(type == 'dev' || type == 'dev')
 				mode = type;

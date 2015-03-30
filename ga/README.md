@@ -10,6 +10,12 @@
 <script data-component="ga" data-ua="UA-XXXX-Y"></script>
 ```
 
+### Annotations
+```html
+<!--@ga({ ua:String })-->
+<script data-component="ga"></script>
+```
+
 ## Optionals
 
 | options       |     default      |        values
@@ -24,13 +30,15 @@
 ### .ga() : `null`
 This method will call original `ga()` and it will log parameters if `data-debug` is setted.
 
-### .mode( [String dev, String prod] ) `null`
+### .ga-mode( [String dev, String prod] ) `null`
 If it's on "dev" mode, `.ga()` will log parameters, otherwise if it's on 'prod' mode it will call original `ga()` method instead.
 
 ### Example
 
 ```js
-var analytics = this.get('component', 'ga').instance();
-    analytics.ga('send', 'pageview');
-    analytics.ga('send', 'event', 'category', 'action');
+    // From a Controller/View or App
+    this.broadcast('component:ga-mode', 'dev');
+    this.broadcast('component:ga', 'send', 'pageview');
+    //...
+    this.broadcast('component:ga', 'event', 'category', 'action');
 ```

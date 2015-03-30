@@ -1,6 +1,6 @@
 define(['jails'],function( jails ){
 
-	jails.component('submitter', function(form){
+	jails.component('submitter', function(form, ann){
 
 		var
 			comp = this,
@@ -8,9 +8,9 @@ define(['jails'],function( jails ){
 
 		this.init = function(){
 
-			action = form.data('emit');
-			serialize = form.data('serialize');
-			params = form.data('params');
+			action = ann.emit || form.data('emit');
+			serialize = ann.serialize || form.data('serialize');
+			params = ann.params || form.data('params');
 
 			form.on('submit', send( action ));
 		};
