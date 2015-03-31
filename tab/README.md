@@ -24,10 +24,7 @@ Emits `tab:change` on **click** event, sending current tab and current content.
 
 ```html
 <!-- @tab({ target :String, click :String, css :String }) -->
-<ul data-component="tab" >
-    (...)
-</ul>
-(...)
+<ul data-component="tab" ></ul>
 ```
 
 ## Optionals
