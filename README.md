@@ -18,3 +18,8 @@
 * [media-image](//github.com/jails-scaffold/Components/tree/master/media-image "Media Image Component")
 
 ---
+
+> ## Lists
+* [tab](//github.com/jails-scaffold/Components/tree/master/tab "Tab Component")
+
+---
