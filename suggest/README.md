@@ -2,6 +2,8 @@
 
 > A simple suggestion component.
 
+**Depends on:** `Mustache`
+
 ---
 
 Emits `suggest:request` when user inputs some text in the text box.
