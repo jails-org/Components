@@ -2,7 +2,7 @@
 
 > A simple suggestion component.
 
-**Depends on:** `Mustache`
+> **Dependencies:** `Mustache`
 
 ---
 
