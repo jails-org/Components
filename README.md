@@ -26,6 +26,6 @@
 ---
 
 > ## Dialog
-* [tab](//github.com/jails-scaffold/Components/tree/master/litemodal "Litemodal Component")
+* [litemodal](//github.com/jails-scaffold/Components/tree/master/litemodal "Litemodal Component")
 
 ---
