@@ -5,8 +5,10 @@
 ---
 
 Emits `suggest:request` when user inputs some text in the text box.
+
 Emits `suggest:selected` when user selects a list element.
-Listen `list` event with a model within to render the suggestion list.
+
+Listen to `list` event with a model within to render the suggestion list.
 
 ## Markup
 
