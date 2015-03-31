@@ -1,7 +1,8 @@
 # suggest
 
 > A simple suggestion component.
->**Depends on:** `Mustache`
+
+**Depends on:** `Mustache`
 
 ---
 
