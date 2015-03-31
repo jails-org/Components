@@ -20,7 +20,12 @@
 
 ---
 
-> ## Lists
+> ## List
 * [tab](//github.com/jails-scaffold/Components/tree/master/tab "Tab Component")
+
+---
+
+> ## Dialog
+* [tab](//github.com/jails-scaffold/Components/tree/master/litemodal "Litemodal Component")
 
 ---
