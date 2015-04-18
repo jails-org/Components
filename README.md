@@ -29,3 +29,6 @@
 * [litemodal](//github.com/jails-scaffold/Components/tree/master/litemodal "Litemodal Component")
 
 ---
+
+> ## View
+* [view](//github.com/jails-scaffold/Components/tree/master/view "View Component")
