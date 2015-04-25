@@ -9,6 +9,12 @@
 Validator component uses the validator library in order to easily create html form markup with validations.
 More info and documentations: [Here](//github.com/Javiani/Validator2)
 
+## Live Example
+
+The sample is in this repository also, if you want to see the source code.
+
+[Sample](//rawgit.com/jails-org/Components/master/validation/sample/index.htm)
+
 ## Markup
 
 ```html
@@ -75,9 +81,3 @@ jails.controller('form', function(html, data){
     };
 });
 ```
-
-## Live Example
-
-The sample is in this repository also, if you want to see the source code.
-
-[Sample](//rawgit.com/jails-org/Components/master/validation/sample/index.htm)
