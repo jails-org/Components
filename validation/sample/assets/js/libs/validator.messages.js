@@ -20,9 +20,8 @@
 	var M = Validator.internal('Message');
 
 	M.add_all({
-		required : 'Este campo é obrigatório',
-		email    : 'Preencha um email valido',
-		number: 'Preencha apenas com números'
+		required : 'This field is required.',
+		email    : 'Invalid email'
 	});
 
 	return M;
