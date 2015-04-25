@@ -66,7 +66,7 @@ jails.controller('form', function(html, data){
         var v = this.x('[data-component]');
 
         //Getting validator instance;
-        validation('instance', function(options){
+        v('instance', function(options){
             validtor = options.validator;
         });
 
