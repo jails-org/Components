@@ -12,6 +12,7 @@
 > ## Form
 * [submitter](//github.com/jails-scaffold/Components/tree/master/submitter "Submitter Component")
 * [suggest](//github.com/jails-scaffold/Components/tree/master/suggest "Suggestion Component")
+* [validation](//github.com/jails-scaffold/Components/tree/master/validation "Validation Component")
 
 ---
 
