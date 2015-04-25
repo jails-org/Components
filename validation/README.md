@@ -47,7 +47,7 @@ you can use the markup just like that:
 
 This component emits just 2 events: `validation:error`, `validation:success`.
 
-It sends the `validator` error object in case of error, more info about it please visit [Validator Project](//github.com/Javiani/Validator2)
+It sends the `validator` error object in case of error, more info about it please visit [Validator Project](//github.com/Javiani/Validator2).
 
 
 ## Methods
