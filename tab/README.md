@@ -2,6 +2,8 @@
 
 >Just a simple tab behavior.
 
+>**Author**: [Eduardo Ottaviani](//github.com/Javiani)
+
 ---
 
 Emits `tab:change` on **click** event, sending current tab and current content.

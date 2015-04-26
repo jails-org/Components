@@ -2,6 +2,8 @@
 
 >Prevents submit default behavior of a form and emit's itself.
 
+>**Author**: [Eduardo Ottaviani](//github.com/Javiani)
+
 ---
 
 ## Usage

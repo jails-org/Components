@@ -2,6 +2,10 @@
 
 > A powerful templating component
 
+>**Dependencies:** `mustache`
+
+>**Author**: [Eduardo Ottaviani](//github.com/Javiani)
+
 ---
 
 View can be used with external templates or use the html as a template.

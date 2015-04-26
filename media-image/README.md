@@ -2,6 +2,8 @@
 
 > This component will load an image only if it matches the screen size.
 
+>**Author**: [Eduardo Ottaviani](//github.com/Javiani)
+
 ---
 
 ### Markup

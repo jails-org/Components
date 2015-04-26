@@ -2,7 +2,9 @@
 
 >Wrapper component to validate forms.
 
-> deps : `validator`, `validator.rules`, `validator.messages`, `validator.mask`
+> **Dependencies:** `validator`, `validator.rules`, `validator.messages`, `validator.mask`
+
+>**Author**: [Eduardo Ottaviani](//github.com/Javiani)
 
 ---
 

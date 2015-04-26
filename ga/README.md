@@ -2,6 +2,8 @@
 
 >This component adds **Google Analytics** snipplet and wraps the ga() method.
 
+>**Author**: [Eduardo Ottaviani](//github.com/Javiani)
+
 ---
 
 ### Markup

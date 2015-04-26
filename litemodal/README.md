@@ -2,8 +2,9 @@
 
 >Opens a dialog window using [litemodal](//github.com/Javiani/Litemodal) css project.
 
+>**Dependencies**:`mustache`
 
->Dependencies:`mustache`
+>**Author**: [Eduardo Ottaviani](//github.com/Javiani)
 
 ---
 

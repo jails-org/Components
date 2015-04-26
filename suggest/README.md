@@ -4,6 +4,8 @@
 
 > **Dependencies:** `Mustache`
 
+> **Author**: [Eduardo Ottaviani](//github.com/Javiani)
+
 ---
 
 Emits `suggest:request` when user inputs some text in the text box.
