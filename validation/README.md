@@ -20,7 +20,11 @@ The sample is in this repository also, if you want to see the source code.
 ## Markup
 
 ```html
-<form data-component="validation" data-rules="required,email" data-mask="digits,letters" />
+<form data-component="validation" data-rules="required,email" data-masks="digits,letters">
+    <input type="text" name="user" class="required letters" />
+    <input type="email" name="email" class="email" />
+    <<input type="number" name="age" class="digits" />
+</form>
 ```
 
 ## Annotations
