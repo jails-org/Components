@@ -1,0 +1,46 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.jumbotron{
+
+	background-color:#33363c;
+	color:#fff;
+	padding:5px 0 0;
+	box-shadow: 0 5px 10px 0px #888888;
+	overflow:hidden;
+	margin:15px 0;
+}
+
+.jumbotron blockquote{
+	margin-top:20px;
+}
+
+.jumbotron h1{
+	font-size:45px;
+	text-shadow:0 1px 3px #000;
+	margin-top:35px;
+}
+
+.logo{
+	color: #2f9bc1;
+	font:bold 50px Arial;
+	line-height: 1em;
+}
+
+form{
+	margin-top:20px;
+}
+
+.dropbox{
+	padding:20px;
+	border:10px dashed rgba(86,61,124,.15);
+}
+
+.dropbox input[type=file]{
+	display:none
+}
+
+.dragover{
+	border-color:#5cb85c;
+}
