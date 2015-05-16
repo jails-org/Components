@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-BR">
+	<head>
+
+		<title>Jails - Selectable</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="icon" href="assets/images/favicon.png">
+
+		<link rel="stylesheet" href="//rawgit.com/jails-org/Lab/master/common/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="//rawgit.com/jails-org/Lab/master/common/css/app.css" type="text/css" />
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" type='text/css'>
+
+		<link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+
+		<script type="text/javascript">
+			var global = { page :'apps/home' };
+		</script>
+		<script type="text/javascript" data-main="assets/js/config" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js"></script>
+
+	</head>
+
+	<body data-app="home">
+
+		<div class="container">
+
+			<header class="jumbotron">
+				<div class="row">
+					<div class="col-md-4">
+						<h1><span class="logo">||\|</span> Lab</h1>
+					</div>
+
+					<div class="col-md-8">
+						<blockquote class="blockquote-reverse">
+							... Perfection is attained not when there is nothing more to add, but when there
+							is nothing more to substract.
+							<footer>Antoine de Saint-Exupéry <cite title="Terre des Hommes">Terre des Hommes</cite></footer>
+						</blockquote>
+					</div>
+				</div>
+
+			</header>
+
+			<section class="row">
+
+				<div class="col-md-4">
+
+					<h1>Selectable items</h1>
+
+					<nav>
+						<!--@selectable({ target :'li', ignore :'.control' })-->
+						<ul class="pagination" data-component="selectable">
+							<li class="control">
+								<a href="#/prev" aria-label="Previous">
+									<span aria-hidden="true">&laquo;</span>
+								</a>
+							</li>
+							<li><a href="#/1">1</a></li>
+							<li><a href="#/2">2</a></li>
+							<li><a href="#/3">3</a></li>
+							<li><a href="#/4">4</a></li>
+							<li><a href="#/5">5</a></li>
+							<li class="control">
+								<a href="#" aria-label="Next">
+									<span aria-hidden="true">&raquo;</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="col-md-4">
+					<!--@selectable({ target :'li', prevent:true })-->
+					<ul class="nav nav-pills" role="tablist" data-component="selectable">
+						<li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+						<li role="presentation"><a href="#">Profile</a></li>
+						<li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4">
+					<!--@selectable({ target :'a' })-->
+					<div class="list-group" data-component="selectable">
+						<a href="#" class="list-group-item active">
+							<h4 class="list-group-item-heading">List group item heading</h4>
+							<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+						</a>
+						<a href="#" class="list-group-item">
+							<h4 class="list-group-item-heading">List group item heading</h4>
+							<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+						</a>
+						<a href="#" class="list-group-item">
+							<h4 class="list-group-item-heading">List group item heading</h4>
+							<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+						</a>
+						<a href="#" class="list-group-item">
+							<h4 class="list-group-item-heading">List group item heading</h4>
+							<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+						</a>
+					</div>
+
+				</div>
+
+			</section>
+
+		</div>
+
+	</body>
+</html>
