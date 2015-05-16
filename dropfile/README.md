@@ -37,4 +37,4 @@ Emits:
 
 ## Live Example
 
-[Live demo](sample/index.htm)
+[Live demo](//rawgit.com/jails-org/Components/master/dropfile/sample/index.htm)
