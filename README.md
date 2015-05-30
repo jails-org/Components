@@ -32,5 +32,6 @@
 
 ---
 
-> ## View
+> ## View/Dom
 * [view](//github.com/jails-scaffold/Components/tree/master/view "View Component")
+* [incude](//github.com/jails-scaffold/Components/tree/master/include "Include Component")
