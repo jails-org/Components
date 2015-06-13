@@ -1,7 +1,7 @@
 define([
 
 	'jails',
-	'components/image-upload'
+	'comps/image-upload/image-upload'
 
 ], function( jails ){
 
