@@ -27,7 +27,3 @@ This component lets you to submit an image for preview by posting it to an actio
 <!--@image-upload({ url: 'json.htm', hiddens :'input:hidden' })-->
 <input type="file" data-component="image-upload" />
 ```
-
-## Live Example
-
-[Live demo](//rawgit.com/jails-org/Components/master/image-upload/sample/index.htm)
