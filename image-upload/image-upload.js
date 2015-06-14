@@ -10,7 +10,7 @@ define([
 		encoding:'multipart/form-data'
 	};
 
-	jails.component('image-upload', function(file, anno){
+	return jails.component('image-upload', function(file, anno){
 
 		var cp = this, body, iframe, form, id, name, url, hiddens;
 

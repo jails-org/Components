@@ -4,7 +4,7 @@ define([
 
 ], function( jails ){
 
-	jails.component('selectable', function(html, anno){
+	return jails.component('selectable', function(html, anno){
 
 		var cp = this, target, ignore, css, prevent;
 

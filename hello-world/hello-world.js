@@ -4,7 +4,7 @@ define([
 
 ], function( jails ){
 
-	jails.component('hello-world', function(element, anno){
+	return jails.component('hello-world', function(element, anno){
 
 		var cp = this, answers;
 

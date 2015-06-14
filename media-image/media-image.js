@@ -4,7 +4,7 @@ define([
 
 ], function( jails ){
 
-	jails.component('media-image', function(image, ann){
+	return jails.component('media-image', function(image, ann){
 
 		var cp = this, min, max, src, css;
 

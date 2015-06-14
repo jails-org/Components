@@ -4,7 +4,7 @@ define([
 
 ], function( jails ){
 
-	jails.component('include', function(node, anno){
+	return jails.component('include', function(node, anno){
 
 		var url, loading, cp = this;
 

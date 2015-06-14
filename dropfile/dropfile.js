@@ -1,6 +1,6 @@
 define(['jails'], function( jails ){
 
-	jails.component('dropfile', function(html, ann){
+	return jails.component('dropfile', function(html, ann){
 
 		var
 			cp = this, input, form,

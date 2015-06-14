@@ -5,7 +5,7 @@ define([
 
 ], function( jails, mustache ){
 
-	jails.component('suggest', function(input, anno){
+	return jails.component('suggest', function(input, anno){
 
 		var cp = this, at, template, target, css;
 

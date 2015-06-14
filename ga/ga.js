@@ -1,6 +1,6 @@
 define(['jails'],function( jails ){
 
-	jails.component('ga', function(html, ann){
+	return jails.component('ga', function(html, ann){
 
 		var _self = this, ua, mode, name;
 

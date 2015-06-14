@@ -4,7 +4,7 @@ define([
 
 ], function( jails ){
 
-	jails.component('sticky', function(html, anno){
+	return jails.component('sticky', function(html, anno){
 
 		var
 			cp = this, win = $(window),

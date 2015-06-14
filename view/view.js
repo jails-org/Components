@@ -5,7 +5,7 @@ define([
 
 ], function( jails, mustache ){
 
-	jails.component('view', function(element, anno){
+	return jails.component('view', function(element, anno){
 
 		var cp = this;
 		var tpl, templates, render, global = jails.data();

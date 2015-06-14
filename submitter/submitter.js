@@ -1,6 +1,6 @@
 define(['jails'],function( jails ){
 
-	jails.component('submitter', function(form, ann){
+	return jails.component('submitter', function(form, ann){
 
 		var
 			comp = this,

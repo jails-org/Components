@@ -5,7 +5,7 @@ define([
 
 ], function( jails, mustache ){
 
-	jails.component('litemodal', function(html, anno){
+	return jails.component('litemodal', function(html, anno){
 
 		var cp = this, body, css_open, css_loading, button;
 

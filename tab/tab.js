@@ -1,6 +1,6 @@
 define(['jails'], function( jails ){
 
-	jails.component('tab', function(html, anno){
+	return jails.component('tab', function(html, anno){
 
 		var cp = this, content, buttons, css;
 
