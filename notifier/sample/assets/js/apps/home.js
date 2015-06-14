@@ -15,7 +15,7 @@ define([
 			html.find('.forms').removeClass('loading');
 		};
 
-		function notify(){
+		function notify(e){
 
 			var form, button, field, css;
 
@@ -26,6 +26,8 @@ define([
 
 			notification('notify', field.val(), css );
 			field.val('');
+
+			e.preventDefault();
 		}
 
 	});

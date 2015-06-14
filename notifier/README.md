@@ -11,7 +11,7 @@ This component can be used to display warning, error and information messages to
 
 ## Live Example
 
-- [Demo](http://rawgit.com/jails-org/Components/master/notifier/sample/index.htm)
+- [Demo](//rawgit.com/jails-org/Components/master/notifier/sample/index.htm)
 
 ---
 
