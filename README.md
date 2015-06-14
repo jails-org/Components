@@ -20,6 +20,7 @@
 * [validation](//github.com/jails-scaffold/Components/tree/master/validation "Validation Component")
 * [dropfile](//github.com/jails-scaffold/Components/tree/master/dropfile "DropFile Component")
 * [image-upload](//github.com/jails-scaffold/Components/tree/master/image-upload "Image Upload Component")
+
 ---
 
 > ## Image
@@ -34,6 +35,7 @@
 
 > ## Dialog
 * [litemodal](//github.com/jails-scaffold/Components/tree/master/litemodal "Litemodal Component")
+* [notifier](//github.com/jails-scaffold/Components/tree/master/notifier "Notifier Component")
 
 ---
 
