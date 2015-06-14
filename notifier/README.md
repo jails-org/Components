@@ -47,3 +47,34 @@ This component can be used to display warning, error and information messages to
 <!--@notifier({ show: String, hide :String, close :String, alert :String, dismiss :String })-->
 <section data-component="notifier" />
 ```
+
+## Methods
+
+### .open()
+
+Just opens the dialog.
+
+---
+
+### .close()
+
+Closes the dialog.
+
+---
+
+### .message(String text, [String css])
+
+Sends a message to be appended on notifier, it takes a optional second parameter with css class name of the appended element.
+
+---
+
+### .notify(String text, [String css])
+
+Calls `.open()` and then `.message()` methods.
+Basically is the same of `.message()` method, but it will always open the notifier dialog.
+
+---
+
+### .dismiss( [Int index] )
+
+Removes a item of the list on a specific position, or remove all the list if no argument is passed.
