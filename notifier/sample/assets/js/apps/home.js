@@ -13,6 +13,7 @@ define([
 
 			this.watch('form', 'submit', notify);
 			html.find('.forms').removeClass('loading');
+			html.find('form').on('submit', prevent);
 		};
 
 		function notify(e){
@@ -27,6 +28,10 @@ define([
 			notification('notify', field.val(), css );
 			field.val('');
 
+			e.preventDefault();
+		}
+
+		function prevent(e){
 			e.preventDefault();
 		}
 
