@@ -12,6 +12,7 @@ define([
 		this.init = function(){
 
 			this.watch('form', 'submit', notify);
+			html.find('.forms').removeClass('loading');
 		};
 
 		function notify(){
