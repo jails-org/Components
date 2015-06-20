@@ -9,11 +9,6 @@
 
 ---
 
-> ## Tracking
-* [ga](//github.com/jails-scaffold/Components/tree/master/ga "Google Analytics Component")
-
----
-
 > ## Form
 * [submitter](//github.com/jails-scaffold/Components/tree/master/submitter "Submitter Component")
 * [suggest](//github.com/jails-scaffold/Components/tree/master/suggest "Suggestion Component")
@@ -39,6 +34,12 @@
 
 ---
 
-> ## View/Dom
-* [view](//github.com/jails-scaffold/Components/tree/master/view "View Component")
-* [incude](//github.com/jails-scaffold/Components/tree/master/include "Include Component")
+> ## Dom/View
+* [view ( Mustache )](//github.com/jails-scaffold/Components/tree/master/view "View Component")
+* [riot-view ( Riot - React )](//github.com/jails-scaffold/Components/tree/master/riot-view "View Component")
+* [include](//github.com/jails-scaffold/Components/tree/master/include "Include Component")
+
+---
+
+> ## Tracking
+* [ga](//github.com/jails-scaffold/Components/tree/master/ga "Google Analytics Component")
