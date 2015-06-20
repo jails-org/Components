@@ -26,7 +26,7 @@ define([
 				return;
 
 			model.list.push({
-				name	:this.item.value,
+				item	:this.item.value,
 				index	:model.list.length
 			});
 
