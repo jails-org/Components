@@ -14,7 +14,6 @@ define([
 			view = new Riot( html, anno ).init();
 
 			model.list = [];
-			model.opts = { title:'Meu teste' };
 
 			html.on('submit', 'form.remove', this.remove);
 			html.on('submit', 'form.add', this.add);
@@ -22,25 +21,29 @@ define([
 
 		this.add = function(e){
 
-			if(! this.item.value )
-				return;
+			var item = this.item;
+			if(! item.value ) return;
 
-			model.list.push({
-				item	:this.item.value,
-				index	:model.list.length
-			});
+			model.list.push({ item:item.value });
 
-			this.item.value = '';
+			item.value = '';
 			view.update( model );
 
 			e.preventDefault();
 		};
 
 		this.remove = function(e){
+			var item, index;
 
-			model.list.splice( this.item.value, 1 );
+			item = this.item;
+
+			$.grep(model.list, function(i, ind){
+				if(i.item == item.value) index = ind;
+			});
+
+			model.list.splice( index, 1 );
+
 			view.update( model );
-
 			e.preventDefault();
 		};
 

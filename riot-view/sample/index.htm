@@ -40,24 +40,38 @@
 
 			</header>
 
-			<todo class="hide" data-component="todo" title="Todo List">
-				<h2>{opts.title}</h2>
-				<ul>
-					<li each={list}>
-						<p>{item}</p>
-						<form action="#" class="remove">
-							<input type="hidden" name="item" value={index} />
-							<button>Delete</button>
-						</form>
-					</li>
-					<li>
-						<form action="#" class="add">
-							<input type="text" name="item" />
-							<button>Add</button>
-						</form>
-					</li>
-				</ul>
-			</todo>
+			<section class="col-md-6 col-md-offset-3">
+
+				<todo class="hide" data-component="todo" title="Todo List">
+
+					<div class="panel panel-default">
+
+						<div class="panel-heading">
+							<h2 class="text-center">{opts.title}</h2>
+						</div>
+						<div class="panel-body">
+							<form action="#" class="add">
+								<p class="form-group">
+									<input type="text" class="form-control" name="item" />
+								</p>
+								<button class="btn btn-success">Add</button>
+							</form>
+						</div>
+
+						<ul class="list-group">
+							<li each={list} class="list-group-item">
+								<p>{item}</p>
+								<form action="#" class="remove">
+									<button class="btn btn-danger">Delete</button>
+									<input type="hidden" name="item" value={item} />
+								</form>
+							</li>
+						</ul>
+					</div>
+
+				</todo>
+
+			</section>
 
 		</div>
 
