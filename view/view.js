@@ -6,7 +6,7 @@ define([
 ], function( jails, mustache ){
 
 	var templates = {};
-	var config = { type :'x-tmpl-mustache', prefix :'tmpl-' };
+	var config = { type :'x-tmpl', prefix :'tmpl-' };
 
 	main();
 
@@ -36,7 +36,7 @@ define([
 		this.partial = function(el, tmpl, vo){
 
 			var newvo, html;
-			vo = vo || {};
+			vo = vo || global || {};
 			tmpl = templates[tmpl] || tmpl;
 
 			if(vo && vo.done){
@@ -99,7 +99,7 @@ define([
 
 	function main(){
 
-		var scripts = document.querySelectorAll('script[type='+config.type+']');
+		var scripts = document.querySelectorAll('script[type*='+config.type+']');
 
 		for(var i = 0; i < scripts.length; i++)
 			partial(scripts[i]);

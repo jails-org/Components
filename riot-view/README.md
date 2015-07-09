@@ -27,14 +27,14 @@ You need ot use the `riot-tag` attribute if you're using an existing html tag:
 ```html
 <div
     riot-tag="mytag"
-    data-component="riot"
+    data-component="view"
 />
 ```
 
 To use custom tags, you just need to set them without `riot-tag` attribute.
 
 ```html
-<mytag title="World" data-component="riot">
+<mytag title="World" data-component="view">
     Hello {title}
 </mytag>
 ```
@@ -49,7 +49,7 @@ To use custom tags, you just need to set them without `riot-tag` attribute.
 
 ```html
 <!-- @view({ hide :String, options :Object }) -->
-<mytag title="World" data-component="riot" />
+<mytag title="World" data-component="view" />
 ```
 
 ---

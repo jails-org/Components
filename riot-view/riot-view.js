@@ -5,7 +5,7 @@ define([
 
 ], function( jails, Riot ){
 
-	return jails.component('riot', function(html, anno){
+	return jails.component('view', function(html, anno){
 
 		var cp = this, node, hide, attr, name;
 
