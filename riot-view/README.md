@@ -103,7 +103,7 @@ Get the raw Riot instance, you can pass a `Function` as a callback if you're try
 
 jails.controller('my-controller', function(html, data){
 
-    var riot = this.x('[data-component*="riot"]');
+    var riot = this.x('[data-component*="view"]');
 
     this.init = function(){
 
