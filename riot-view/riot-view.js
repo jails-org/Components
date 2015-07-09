@@ -27,7 +27,7 @@ define([
 		};
 
 		this.update = function( model ){
-			cp.riot.update( model );
+			cp.riot.update( model || jails.data() );
 		};
 
 		this.get = function(callback){
