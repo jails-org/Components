@@ -5,14 +5,17 @@ define([
 
 ], function( jails, mustache ){
 
+	var templates = {};
+	var config = { type :'x-tmpl-mustache', prefix :'tmpl-' };
+
+	main();
+
 	return jails.component('view', function(element, anno){
 
 		var cp = this;
-		var tpl, templates, render, global = jails.data();
+		var tpl, render, global = jails.data();
 
 		this.init = function(){
-
-			templates = jails.templates;
 
 			tpl = get(anno.template) || get(element.data('template')) || generate(element);
 			render = get(anno.render) || element.data('render');
@@ -92,6 +95,28 @@ define([
 		return $.trim(aux.html().replace(/(data-attr)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/g, function(a, b, c, d){
 			return c;
 		}));
+	}
+
+	function main(){
+
+		var scripts = document.querySelectorAll('script[type='+config.type+']');
+
+		for(var i = 0; i < scripts.length; i++)
+			partial(scripts[i]);
+
+		//Injecting new Default out filter
+		jails.filters.out = function(text){
+			var h = $(text), aux  = $('<div />'), script = h.data('out');
+				h.html((new Function('return ' +script))());
+				aux.append(h);
+			return aux.html();
+		};
+	}
+
+	function partial(el){
+		var cfg = config.prefix;
+		var name = el.id.split( cfg || 'tmpl-').pop();
+		templates[name] = el.innerHTML.replace(/^\s+|\s+$/g, '');
 	}
 
 });
