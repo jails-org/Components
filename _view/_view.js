@@ -40,14 +40,19 @@ define([
 		};
 
 		this.render = function( vo, tpl ){
-			var tmpl = tpl || template(vo);
-			partial(html, tmpl, vo);
+			var data = jails.data();
+			var tmpl = tpl || template(vo || data);
+			partial(html, tmpl, vo || data);
+		};
+
+		this.templates = function( callback ){
+			callback? callback(templates) :null;
 		};
 
 		function partial(el, tmpl, vo){
 
 			var newvo, html;
-			vo = vo || jails.data() || {};
+			vo = vo || {};
 			tmpl = templates[tmpl] || tmpl;
 
 			if(vo && vo.done){
@@ -58,7 +63,7 @@ define([
 				el.html( html );
 				jails.refresh( el );
 			}
-		}
+		};
 
 	});
 

@@ -34,7 +34,7 @@ or
 View will render the html mixing the data object with a specified template.
 
 ## .templates
-    .render( callback );
+    .templates( callback );
 
 Sends back to a function all the stored templates in the page. The view component stores in a object all the script tags inner text templates rendered in the page.
 
