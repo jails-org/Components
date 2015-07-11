@@ -20,6 +20,7 @@
 
 > ## Image
 * [media-image](//github.com/jails-scaffold/Components/tree/master/media-image "Media Image Component")
+* [preloader](//github.com/jails-scaffold/Components/tree/master/preloader "Preloader Component")
 
 ---
 
