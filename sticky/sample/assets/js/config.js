@@ -5,7 +5,7 @@ require.config({
 	include :['config'],
 
 	paths   :{
-		jails		:'../../../Jails/source/jails',
+		jails		:'//rawgit.com/jails-org/Jails/master/source/jails.min',
 		mods		:'//rawgit.com/jails-org/Modules/master',
 		comps		:'//rawgit.com/jails-org/Components/master',
 		jquery 		:'//code.jquery.com/jquery-2.1.1.min',
