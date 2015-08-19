@@ -59,7 +59,7 @@ define([
 
 	function generate(el){
 
-		var html = el.html(), ch = $('<div />'), aux = $('<div />'), text;
+		var html = el.html(), ch = $('<div />'), aux = $('<div />'), text, s_aux;
 
 		aux.append( html );
 
@@ -91,8 +91,15 @@ define([
 			$(this).before('{{#out}}').after('{{/out}}');
 		});
 
+		aux.find('[data-attr]').each(function(){
+			var it = this;
+			$(it).data('attr').replace(/(\S+)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/, function(all, attr){
+				it.removeAttribute(attr);
+			});
+		});
+
 		//http://stackoverflow.com/questions/317053/regular-expression-for-extracting-tag-attributes
-		return $.trim(aux.html().replace(/(data-attr)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/g, function(a, b, c, d){
+		return $.trim( aux.html().replace(/(data-attr)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/g, function(a, b, c, d){
 			return c;
 		}));
 	}
@@ -102,7 +109,7 @@ define([
 		var scripts = document.querySelectorAll('script[type*='+config.type+']');
 
 		for(var i = 0; i < scripts.length; i++)
-			partial(scripts[i]);
+			partial( scripts[i] );
 
 		//Injecting new Default out filter
 		jails.filters.out = function(text){

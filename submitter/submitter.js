@@ -40,12 +40,13 @@ define(['jails'],function( jails ){
 	});
 
 	function get_params(f){
-		var p = {}, elements = f.elements;
+		var p = {};
 
-		$.each(elements, function(){
+		$.each(f.serializeArray(), function(){
 			if(this.name) p[this.name] = this.value;
 		});
 
 		return p;
 	}
+
 });
