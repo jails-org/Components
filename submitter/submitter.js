@@ -20,7 +20,7 @@ define(['jails'],function( jails ){
 		};
 
 		this.params = function(){
-			return get_params(form.get(0));
+			return get_params(form);
 		};
 
 		function send(action){
@@ -31,7 +31,7 @@ define(['jails'],function( jails ){
 					data.form = this;
 
 				if(serialize) data.serialize = serialize? form.serialize() :null;
-				if(params) data.params = get_params(this);
+				if(params) data.params = get_params(form);
 
 				comp.emit( action, data );
 				e.preventDefault();
