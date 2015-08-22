@@ -17,6 +17,7 @@ define([
 			html.addClass( loading );
 			image.on('load', loaded).on('error', exception);
 			lazy_load();
+			load_cache();
 		};
 
 		function loaded(){
@@ -59,6 +60,12 @@ define([
 			if( is_visible() ){
 				image.prop('src', lazy);
 				win.off('scroll', check_and_set);
+			}
+		}
+
+		function load_cache(){
+			if( image[0].complete ){
+				image.load();
 			}
 		}
 	});

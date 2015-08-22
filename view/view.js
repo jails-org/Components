@@ -6,6 +6,7 @@ define([
 ], function( jails, mustache ){
 
 	var templates = {};
+	var filters = {};
 	var config = { type :'x-tmpl', prefix :'tmpl-' };
 
 	main();
@@ -43,12 +44,20 @@ define([
 				vo.done(function(response){ cp.partial(el, tmpl, response); });
 			}
 			else{
-				newvo = $.extend({}, vo, jails.filters);
+				newvo = $.extend({}, vo, filters);
 				html = mustache.render( tmpl || tpl, newvo, templates );
 
 				el.html( html );
 				jails.refresh( el );
 			}
+		};
+
+		this.filter = function(name, method){
+			return filters[name] = function(){
+				return function(text, render){
+					return method( render(text) );
+				};
+			};
 		};
 
 		function get(name){
@@ -65,42 +74,45 @@ define([
 
 		aux.find('[data-if]').each(function(){
 			var it = $(this), v = it.data('if');
-			it.before('{{#'+v+'}}');
-			it.after('{{/'+v+'}}');
+			it.before('<!--{{#'+v+'}}-->');
+			it.after('<!--{{/'+v+'}}-->');
 		});
 
 		aux.find('[data-not]').each(function(){
 			var it = $(this), v = it.data('not');
-			it.before('{{^'+v+'}}');
-			it.after('{{/'+v+'}}');
+			it.before('<!--{{^'+v+'}}-->');
+			it.after('<!--{{/'+v+'}}-->');
 		});
 
 		aux.find('[data-each]').each(function(){
 			var it = $(this), child = it.children().eq(0), name = it.data('each');
 			ch.empty().append(child);
-			it.html('{{#'+name +'}}'+ch.html()+'{{/'+name+'}}');
+			it.html('<!--{{#'+name +'}}-->'+ch.html()+'<!--{{/'+name+'}}-->');
 		});
 
 		aux.find('[data-value]').each(function(){
 			var it = $(this), name = it.data('value'), filter = name.split(/\:/);
-			if(!filter[1]) it.html( '{{'+ name +'}}');
-			else it.html('{{#'+filter[1]+'}}{{' +filter[0]+ '}}{{/'+filter[1]+'}}');
+			if(!filter[1]) it.html( '<!--{{'+ name +'}}-->');
+			else it.html('<!--{{#'+filter[1]+'}}-->{{' +filter[0]+ '}}<!--{{/'+filter[1]+'}}-->');
 		});
 
 		aux.find('[data-out]').each(function(){
-			$(this).before('{{#out}}').after('{{/out}}');
+			$(this).before('<!--{{#out}}-->').after('<!--{{/out}}-->');
 		});
 
 		aux.find('[data-attr]').each(function(){
-			var it = this;
-			$(it).data('attr').replace(/(\S+)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/, function(all, attr){
+			var it = this, attributes = (new Function('return '+ $(it).data('attr')))();
+			Object.keys( attributes ).forEach(function(attr){
 				it.removeAttribute(attr);
 			});
 		});
 
-		//http://stackoverflow.com/questions/317053/regular-expression-for-extracting-tag-attributes
-		return $.trim( aux.html().replace(/(data-attr)=["']?((?:.(?!["']?\s+(?:\S+)=|[>"']))+.)["']?/g, function(a, b, c, d){
-			return c;
+		return $.trim( aux.html().replace(/(data-attr)="\{{1}(.*)\}{1}"/g, function(a, b, c, d){
+			var attributes = ' ',  o = new Function('return {'+c +'}')();
+			Object.keys(o).forEach(function(key){
+				if( key ) attributes += (key + '=\"' + o[key] + '\"');
+			});
+			return attributes;
 		}));
 	}
 
@@ -112,7 +124,7 @@ define([
 			partial( scripts[i] );
 
 		//Injecting new Default out filter
-		jails.filters.out = function(text){
+		filters.out = function(text){
 			var h = $(text), aux  = $('<div />'), script = h.data('out');
 				h.html((new Function('return ' +script))());
 				aux.append(h);
