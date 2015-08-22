@@ -92,12 +92,12 @@ define([
 
 		aux.find('[data-value]').each(function(){
 			var it = $(this), name = it.data('value'), filter = name.split(/\:/);
-			if(!filter[1]) it.html( '<!--{{'+ name +'}}-->');
-			else it.html('<!--{{#'+filter[1]+'}}-->{{' +filter[0]+ '}}<!--{{/'+filter[1]+'}}-->');
+			if(!filter[1]) it.html( '{{'+ name +'}}');
+			else it.html('{{#'+filter[1]+'}}{{' +filter[0]+ '}}{{/'+filter[1]+'}}');
 		});
 
 		aux.find('[data-out]').each(function(){
-			$(this).before('<!--{{#out}}-->').after('<!--{{/out}}-->');
+			$(this).before('{{#out}}').after('{{/out}}');
 		});
 
 		aux.find('[data-attr]').each(function(){
