@@ -15,6 +15,7 @@
 * [validation](//github.com/jails-scaffold/Components/tree/master/validation "Validation Component")
 * [dropfile](//github.com/jails-scaffold/Components/tree/master/dropfile "DropFile Component")
 * [image-upload](//github.com/jails-scaffold/Components/tree/master/image-upload "Image Upload Component")
+* [autopost](//github.com/jails-scaffold/Components/tree/master/autopost "Autopost Component")
 
 ---
 
