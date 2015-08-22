@@ -20,9 +20,9 @@ define([
 			this.win  = html;
 			this.body = html.find('.m-body');
 
-			body.on('click', '.litemodal', outsideclose);
-			body.on('click', '.litemodal '+ button_close, prevent(this.close) );
-			body.on('click', button, click_open );
+			html.on('click', outsideclose);
+			html.on('click', button_close, prevent(this.close) );
+			html.on('click', button, click_open );
 
 			listening();
 		};
@@ -61,7 +61,7 @@ define([
 		}
 
 		function outsideclose(e){
-			if( $(e.target).is('.litemodal') ){
+			if( !html.find(e.target).length ){
 				cp.close();
 			}
 		}

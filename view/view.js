@@ -110,7 +110,7 @@ define([
 		return $.trim( aux.html().replace(/(data-attr)="\{{1}(.*)\}{1}"/g, function(a, b, c, d){
 			var attributes = ' ',  o = new Function('return {'+c +'}')();
 			Object.keys(o).forEach(function(key){
-				if( key ) attributes += (key + '=\"' + o[key] + '\"');
+				if( key ) attributes += (key + '=\"' + o[key] + '\" ');
 			});
 			return attributes;
 		}));
