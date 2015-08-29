@@ -1,0 +1,129 @@
+{
+	"items" :[
+		{
+			"name" :"hello-world",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"Just a simple Hello World component for testing.",
+			"section" :"Hello World"
+		},
+
+		{
+			"name" :"submitter",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"Prevents submit default behavior of a form and emits an event with parameters or data serialized.",
+			"section" :"Form"
+		},
+
+		{
+			"name" :"suggest",
+			"authors":["Eduardo Ottaviani"],
+			"dependencies" :["Mustache"],
+			"description" :"A simple suggestion component.",
+			"section" :"Form"
+		},
+
+		{
+			"name" :"validation",
+			"authors":["Eduardo Ottaviani"],
+			"dependencies" :["validator", "validator.rules", "validator.messages", "validator.mask"],
+			"description" :"Validator Wrapper component to validate forms.",
+			"section" :"Form"
+		},
+
+		{
+			"name" :"dropfile",
+			"authors" :["Eduardo Ottaviani"],
+			"description":"Drag and Drop file component.",
+			"section" :"Form"
+		},
+
+		{
+			"name" :"image-upload",
+			"authors" :["Eduardo Ottaviani"],
+			"description" :"Submits an image to server via hidden iframe as a normal form post, emulating ajax for binary files.",
+			"section" :"Form"
+		},
+
+		{
+			"name" :"autopost",
+			"authors" :["Eduardo Ottaviani"],
+			"description" :"Triggers .submit() method of the form after a pre-defined event on some html element.",
+			"section" :"Form"
+		},
+
+		{
+			"name" :"media-image",
+			"authors" :["Eduardo Ottaviani"],
+			"description" :"This component will load an image only if it matches the screen size.",
+			"section" :"Image"
+		},
+
+		{
+			"name" :"preloader",
+			"authors" :["Eduardo Ottaviani"],
+			"description":"Preloader and Lazy loader for images.",
+			"section" :"Image"
+		},
+
+		{
+			"name" :"tab",
+			"authors" :["Eduardo Ottaviani"],
+			"description" :"Just a simple tab component.",
+			"section" :"List"
+		},
+
+		{
+			"name" :"litemodal",
+			"authors" :["Eduardo Ottaviani"],
+			"dependencies" :["Mustache"],
+			"description" :"Opens a dialog window using litemodal css project.",
+			"section" :"Dialog"
+		},
+
+		{
+			"name" :"notifier",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"Wraps a simple logic to display messages to the user.",
+			"section" :"Dialog"
+		},
+
+		{
+			"name" :"view",
+			"authors" :["Eduardo Ottaviani"],
+			"dependencies" :["Mustache"],
+			"description" :"A powerful templating component.",
+			"section" :"Dom & View"
+		},
+
+		{
+			"name" :"_view",
+			"authors" :["Eduardo Ottaviani"],
+			"dependencies" :["underscore"],
+			"description" :"A underscore template component.",
+			"section" :"Dom & View"
+		},
+
+		{
+			"name" :"riot-view",
+			"authors" :["Eduardo Ottaviani"],
+			"dependencies" :["Riot"],
+			"description" :"A wrapper to the great Riot.js the React-Like User Interface Library.",
+			"section" :"Dom & View"
+		},
+
+		{
+			"name" :"include",
+			"authors" :["Eduardo Ottaviani"],
+			"dependencies" :["Riot"],
+			"description" :"Include loads an external html and appends it inside the component element.",
+			"section" :"Dom & View"
+		},
+
+		{
+			"name" :"ga",
+			"authors" :["Eduardo Ottaviani"],
+			"description" :"This component adds Google Analytics snipplet and wraps the ga() method.",
+			"section" :"Tracking"
+		}
+	]
+}
