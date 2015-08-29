@@ -27,6 +27,7 @@
 			"authors":["Eduardo Ottaviani"],
 			"dependencies" :["validator", "validator.rules", "validator.messages", "validator.mask"],
 			"description" :"Validator Wrapper component to validate forms.",
+			"sample" :"sample/index.htm",
 			"section" :"Form"
 		},
 
@@ -34,6 +35,7 @@
 			"name" :"dropfile",
 			"authors" :["Eduardo Ottaviani"],
 			"description":"Drag and Drop file component.",
+			"sample" :"sample/index.htm",
 			"section" :"Form"
 		},
 
@@ -41,6 +43,7 @@
 			"name" :"image-upload",
 			"authors" :["Eduardo Ottaviani"],
 			"description" :"Submits an image to server via hidden iframe as a normal form post, emulating ajax for binary files.",
+			"sample" :"sample/index.htm",
 			"section" :"Form"
 		},
 
@@ -69,7 +72,23 @@
 			"name" :"tab",
 			"authors" :["Eduardo Ottaviani"],
 			"description" :"Just a simple tab component.",
-			"section" :"List"
+			"section" :"Dom"
+		},
+
+		{
+			"name" :"selectable",
+			"authors" :["Eduardo Ottaviani"],
+			"description" :"The selectable component does the selecting logic for anchor links and buttons or anything that is clickable and must be default prevented, also adds a class to the current/active element.",
+			"sample" :"sample/index.htm",
+			"section" :"Dom"
+		},
+
+		{
+			"name" :"sticky",
+			"authors" :["Eduardo Ottaviani"],
+			"description" :"Sticky lets your html element fixed to the page with start and stop breakpoints, often used on information boxed on sidebar when site content generates scrolling for instance.",
+			"sample" :"sample/index.htm",
+			"section" :"Dom"
 		},
 
 		{
@@ -84,6 +103,7 @@
 			"name" :"notifier",
 			"authors":["Eduardo Ottaviani"],
 			"description" :"Wraps a simple logic to display messages to the user.",
+			"sample" :"sample/index.htm",
 			"section" :"Dialog"
 		},
 
@@ -108,13 +128,13 @@
 			"authors" :["Eduardo Ottaviani"],
 			"dependencies" :["Riot"],
 			"description" :"A wrapper to the great Riot.js the React-Like User Interface Library.",
+			"sample" :"sample/index.htm",
 			"section" :"Dom & View"
 		},
 
 		{
 			"name" :"include",
 			"authors" :["Eduardo Ottaviani"],
-			"dependencies" :["Riot"],
 			"description" :"Include loads an external html and appends it inside the component element.",
 			"section" :"Dom & View"
 		},
