@@ -70,7 +70,7 @@ define([
 
 		var html = el.html(), ch = $('<div />'), aux = $('<div />'), text, s_aux;
 
-		aux.append( html );
+		aux.append( el.clone() );
 
 		aux.find('[data-if]').each(function(){
 			var it = $(this), v = it.data('if');
