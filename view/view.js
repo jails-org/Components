@@ -49,7 +49,7 @@ define([
 				html = mustache.render( tmpl || tpl, newvo, templates );
 
 				el.html( html );
-				jails.refresh( el );
+				jails.refresh( el[0] );
 			}
 		};
 
