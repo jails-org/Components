@@ -9,7 +9,7 @@ define([
 		var cp = this, target, ev;
 
 		this.init = function(){
-
+			html = $(html);
 			target = anno.target || html.data('autopost-target');
 			ev = anno.event || html.data('autopost-event') || 'change';
 

@@ -34,7 +34,7 @@ define([
 		var cp = this, template;
 
 		this.init = function(){
-
+			html = $(html);
 			decoder.innerHTML = $.trim( html[0].innerHTML );
 			template = _.template( decoder.innerText );
 		};

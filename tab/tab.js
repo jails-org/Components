@@ -6,6 +6,7 @@ define(['jails'], function( jails ){
 
 		this.init = function(){
 
+			html	= $(html);
 			content = $(anno.target || html.data('tab-target'));
 			buttons = $(anno.click || html.data('tab-click'));
 			css		= anno.css	|| html.data('tab-css') || 'active';

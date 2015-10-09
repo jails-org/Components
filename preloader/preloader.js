@@ -11,7 +11,7 @@ define([
 		lazy, h, win;
 
 		this.init = function(){
-
+			html = $(html);	
 			settings();
 
 			html.addClass( loading );

@@ -10,6 +10,7 @@ define([
 
 		this.init = function(){
 
+			html    = $(html);
 			ignore 	= anno.ignore || html.data('selectable-ignore');
 			target 	= anno.target || html.data('selectable-target') || 'a';
 			css		= anno.css || html.data('selectable-css') || 'active';

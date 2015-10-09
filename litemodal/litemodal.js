@@ -11,6 +11,7 @@ define([
 
 		this.init = function(){
 
+			html = $(html);	
 			css_open = anno.open || html.data('litemodal-open') || 'open';
 			css_loading = anno.loading || html.data('litemodal-loading') || 'loading';
 			button_close = anno.close || html.data('litemodal-close') || 'a[rel=close]';

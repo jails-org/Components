@@ -8,6 +8,7 @@ define(['jails'],function( jails ){
 
 		this.init = function(){
 
+			form = $(form);	
 			action = ann.emit || form.data('emit');
 			serialize = ann.serialize || form.data('serialize');
 			params = ann.params || form.data('params');

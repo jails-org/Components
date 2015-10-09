@@ -18,6 +18,7 @@ define([
 
 		function set(){
 
+			html = $(html);	
 			win = $(window);
 			top = anno.top || html.data('sticky-top') || 0;
 			clss = anno.fixed || html.data('sticky-css') || 'fixed';

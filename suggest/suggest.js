@@ -11,6 +11,7 @@ define([
 
 		this.init = function(){
 
+			input = $(input);
 			at = anno.at || input.data('suggest-at') || 3;
 			target = $(anno.target || input.data('suggest-target'));
 			template = $(anno.template || input.data('suggest-template')).html();

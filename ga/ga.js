@@ -5,7 +5,7 @@ define(['jails'],function( jails ){
 		var _self = this, ua, mode, name;
 
 		this.init = function(){
-
+			html 	= $(html);	
 			name	= this.name;
 			ua		= ann.ua || html.data('ua');
 			mode	= ann.debug || html.data('debug')? 'dev' :'prod';

@@ -13,6 +13,7 @@ define([
 
 		this.init = function(){
 
+			container = $(container);
 			show	= anno.show  || container.data('notifier-show') || 'show';
 			hide 	= anno.hide  || container.data('notifier-hide') || '';
 			close	= anno.close || container.data('notifier-close') || '.notifier-close';

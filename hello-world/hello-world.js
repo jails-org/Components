@@ -9,7 +9,7 @@ define([
 		var cp = this, answers;
 
 		this.init = function(){
-
+			element = $(element);
 			answers = get_answers();
 			this.greetings();
 		};

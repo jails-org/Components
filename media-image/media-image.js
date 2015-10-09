@@ -13,6 +13,7 @@ define([
 
 		this.init = function(){
 
+			image = $(image);
 			min = +( ann.min || image.data('media-min') || min );
 			max = +( ann.max || image.data('media-max') || max );
 			css = ann.css || image.data('media-css') || 'show';

@@ -9,7 +9,7 @@ define([
 		var url, loading, cp = this;
 
 		this.init = function(){
-
+			node = $(node);
 			url = anno.url || node.data('include');
 			loading = anno.loading || node.data('loading') || 'loading';
 

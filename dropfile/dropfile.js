@@ -7,7 +7,7 @@ define(['jails'], function( jails ){
 			url, dropbox, css, dropcss;
 
 		this.init = function(){
-
+			html 	= $(html);
 			input	= html.get(0);
 			form	= input.form;
 			f 		= $(form);

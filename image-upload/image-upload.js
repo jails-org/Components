@@ -15,7 +15,7 @@ define([
 		var cp = this, body, iframe, form, id, name, url, hiddens;
 
 		this.init = function(){
-
+			file = $(file);	
 			body = $(document.body);
 			name = file.attr('name');
 			id = 'iframe-upload-' + name;

@@ -13,6 +13,7 @@ define([
 
 		this.init = function( options ){
 
+			html = $(html);	
 			node = html.get(0);
 			hide = anno.hide || html.data('riot-hide') || 'hide';
 			options = options || anno.options || html.data('riot-options');

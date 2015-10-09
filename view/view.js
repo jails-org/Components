@@ -18,6 +18,7 @@ define([
 
 		this.init = function(){
 
+			element = $(element);
 			tpl = get(anno.template) || get(element.data('template')) || generate(element);
 			render = get(anno.render) || element.data('render');
 

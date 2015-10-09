@@ -14,6 +14,7 @@ define([
 
 		this.init = function(){
 
+			form = $(form);	
 			instance = validator.create({ holder :form });
 
 			load_rules();
