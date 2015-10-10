@@ -2,15 +2,23 @@
 
 >A brief description about what your component does.
 
+>**Version** :`0.0.0`
+
 >**Dependencies**: `lib1`, `lib2`, `lib3`
 
 >**Author**: [Author's name](http://link-to-find-me)
 
 >**Sample**: [Demo](//rawgit.com/jails-org/Components/master/component/sample/index.htm)
 
+
 ---
 
 Sample is not mandatory, you can remove the sample line from the header.
+
+Sample is not mandatory, you can remove the sample line from the header.
+Also Dependencies are not mandatory, if your component doesn't have any, just remove that line too.
+
+Semantic Versioning is welcome here =).
 
 ## Markup
 

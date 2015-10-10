@@ -1,7 +1,7 @@
 define([
 
 	'jails',
-	'../../../../notifier'
+	'../../../../my-component'
 
 ], function( jails, component ){
 
