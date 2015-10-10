@@ -6,7 +6,7 @@
 
 >**Author**: [Author's name](http://link-to-find-me)
 
->**Sample**: [Demo](//rawgit.com/jails-org/Components/master/notifier/sample/index.htm)
+>**Sample**: [Demo](//rawgit.com/jails-org/Components/master/component/sample/index.htm)
 
 ---
 
@@ -26,9 +26,18 @@ It's always nice to show should be your component's markup
 Does it has annotations? Then show us =).
 
 ```html
-<!--@notifier({ show: String, hide :String, close :String, alert :String, dismiss :String })-->
+<!--@notifier({ param1: String, param2 :String, param3 :Boolean })-->
 <section data-component="my-component" />
 ```
+
+## Optionals
+
+If your component has markup or default parameters, you can use a simple table to show them.
+
+| options       |     default      |        values
+|:--------------|:----------------:|:-----------------
+| data-option   |    null          |  `string` *Should be the name of something*
+| data-init     |    false         |  `true`, `false` *Should be the state of something*
 
 ## Methods
 
