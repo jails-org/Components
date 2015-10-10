@@ -1,80 +1,63 @@
-# notifier
+# {{my-component}}
 
->Wraps a simple logic to display messages to the user.
+>A brief description about what your component does.
 
->**Author**: [Eduardo Ottaviani](//github.com/Javiani)
+>**Dependencies**: `lib1`, `lib2`, `lib3`
 
----
+>**Author**: [Author's name](http://link-to-find-me)
 
-This component can be used to display warning, error and information messages to the user in your page.
-
-
-## Live Example
-
-- [Demo](//rawgit.com/jails-org/Components/master/notifier/sample/index.htm)
+>**Sample**: [Demo](//rawgit.com/jails-org/Components/master/notifier/sample/index.htm)
 
 ---
 
-
-## Options
-
-- `data-notifier-show` : The css class used to display notifier container. Default : **show**
-- `data-notifier-hide` : The css class used to hide notifier container.
-- `data-notifier-close`: The selector of the element that triggers closing dialog event. Default : **.notifier-close**
-- `data-notifier-alert`: The messages html container to be used as template for the next messages. Default : **.alert**
-- `data-notifier-dismiss`: The selector of the element that triggers the removing item event. Default : **.close**
-
-
----
+Sample is not mandatory, you can remove the sample line from the header.
 
 ## Markup
 
+It's always nice to show should be your component's markup
+
 ```html
-<section data-component="notifier">
-
-    <a href="#" class="notifier-close">Close</a>
-    <p class="alert">
-        <a href="#/" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></a>
-    </p>
-
-</section>
+<section data-component="my-component"></section>
 
 ```
 
 ## Annotations
 
+Does it has annotations? Then show us =).
+
 ```html
 <!--@notifier({ show: String, hide :String, close :String, alert :String, dismiss :String })-->
-<section data-component="notifier" />
+<section data-component="my-component" />
 ```
 
 ## Methods
 
-### .open()
+## .method
+    .method();
 
-Just opens the dialog.
-
----
-
-### .close()
-
-Closes the dialog.
+Show your component's public methods.
 
 ---
 
-### .message(String text, [String css])
+### .another
+    .another(String text, [String css]);
 
-Sends a message to be appended on notifier, it takes a optional second parameter with css class name of the appended element.
-
----
-
-### .notify(String text, [String css])
-
-Calls `.open()` and then `.message()` methods.
-Basically is the same of `.message()` method, but it will always open the notifier dialog.
+Also if it has parameters.
 
 ---
 
-### .dismiss( [Int index] )
+### .method2
+    .method2();
 
-Removes a item of the list on a specific position, or remove all the list if no argument is passed.
+If you need to show code:
+
+```js
+jails.component('my-component', function(element, anno){
+
+    this.init = function(){
+        //Stuffs
+    };
+});
+```
+
+---
