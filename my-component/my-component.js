@@ -9,7 +9,7 @@ define([
 		var cp = this;
 
 		this.init = function(){
-			html.append('Yey, my component is here!');
+			$(html).append('Yey, my component is here!');
 		};
 
 	});
