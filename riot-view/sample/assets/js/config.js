@@ -6,8 +6,8 @@ require.config({
 	paths   :{
 
 		jails		:'//rawgit.com/Javiani/Jails/master/source/jails.min',
-		mods		:'//rawgit.com/jails-org/Modules/master',
-		comps		:'//rawgit.com/jails-org/Components/master',
+		mods		:'//rawgit.com/jails-org/Modules/jquery/zepto',
+		comps		:'//rawgit.com/jails-org/Components/jquery/zepto',
 		jquery 		:'//code.jquery.com/jquery-2.1.1.min',
 		riot		:'//cdnjs.cloudflare.com/ajax/libs/riot/2.1.0/riot.min'
 	},

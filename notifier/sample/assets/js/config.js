@@ -6,8 +6,8 @@ require.config({
 	paths   :{
 		jails		:'//rawgit.com/jails-org/Jails/master/source/jails.min',
 		jquery 		:'//code.jquery.com/jquery-2.1.1.min',
-		mods		:'//rawgit.com/jails-org/Modules/master',
-		comps		:'//rawgit.com/jails-org/Components/master'
+		mods		:'//rawgit.com/jails-org/Modules/jquery/zepto',
+		comps		:'//rawgit.com/jails-org/Components/jquery/zepto'
 	},
 
 	callback :function( jquery, jails ){

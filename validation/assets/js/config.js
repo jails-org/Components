@@ -14,8 +14,8 @@ require.config({
 
 		jails		:'//rawgit.com/jails-org/Jails/master/source/jails.min',
 		mustache  	:'//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min',
-		mods		:'//rawgit.com/jails-org/Modules/master',
-		comps		:'//rawgit.com/jails-org/Components/master'
+		mods		:'//rawgit.com/jails-org/Modules/jquery/zepto',
+		comps		:'//rawgit.com/jails-org/Components/jquery/zepto'
 	},
 
 	callback :function( jails ){
