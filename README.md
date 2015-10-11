@@ -1,4 +1,4 @@
-![Components](http://jails-org.github.io/Jails/assets/images/components.png)
+![Components](//jails-org.github.io/Jails/assets/images/components.png)
 
 > This respository keeps all official and registered **Jails Components**.
 
