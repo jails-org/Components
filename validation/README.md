@@ -15,7 +15,7 @@ More info and documentations: [Here](//github.com/Javiani/Validator2)
 
 The sample is in this repository also, if you want to see the source code.
 
-[Sample](//rawgit.com/jails-org/Components/master/validation/sample/index.htm)
+[Sample](//rawgit.com/jails-org/Components/jquery/zepto/validation/sample/index.htm)
 
 ## Markup
 

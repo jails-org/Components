@@ -8,6 +8,10 @@
 
 Set a css class on a element at some `y` point of scrolling. Useful to set a header sticky at some scroll point.
 
+## Live Example
+
+[Live demo](//rawgit.com/jails-org/Components/jquery/zepto/sticky/sample/index.htm)
+
 ## Markup
 
 ```html

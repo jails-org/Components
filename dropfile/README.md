@@ -12,6 +12,11 @@ Emits:
 - `dropfile:dragleave`
 - `dropfile:drop`
 
+## Live Example
+
+[Live demo](//rawgit.com/jails-org/Components/jquery/zepto/dropfile/sample/index.htm)
+
+
 ## Markup
 
 **Required** :`data-drop`
@@ -34,7 +39,3 @@ Emits:
 <!-- @dropfile({ drop :String, dragcss :String, dropcss :String }) -->
 <input type="file" data-component="dropfile" />
 ```
-
-## Live Example
-
-[Live demo](//rawgit.com/jails-org/Components/master/dropfile/sample/index.htm)

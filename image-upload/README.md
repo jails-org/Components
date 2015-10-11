@@ -8,6 +8,10 @@
 
 This component lets you to submit an image for preview by posting it to an action using a hidden iframe. It's usually called fake ajax request, since the page is not reloaded and in the same time it lets you to submit binary files.
 
+## Live Example
+
+[Live demo](//rawgit.com/jails-org/Components/jquery/zepto/image-upload/sample/index.htm)
+
 
 **Optionals**
 `data-image-upload-hiddens`, `data-image-upload-url`

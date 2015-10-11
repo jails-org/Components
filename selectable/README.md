@@ -10,6 +10,10 @@ Emits:
 
 - `selectable:select`
 
+## Live Example
+
+[Live demo](//rawgit.com/jails-org/Components/jquery/zepto/selectable/sample/index.htm)
+
 ## Markup
 
 **Optional** :`data-selectable-ignore`, `data-selectable-target`, `data-selectable-css`, `data-selectable-prevent`.
@@ -33,7 +37,3 @@ Emits:
 <!-- @selectable({ ignore :String, target :String, css :String, prevent :Boolean }) -->
 <ul data-component="selectable">...</ul>
 ```
-
-## Live Example
-
-[Live demo](//rawgit.com/jails-org/Components/master/selectable/sample/index.htm)

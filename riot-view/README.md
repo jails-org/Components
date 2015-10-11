@@ -18,7 +18,7 @@ This wrapper instantiates and initiates the [Riot](//muut.com/riotjs/) library, 
 
 ## Live Example
 
-[Live demo](//rawgit.com/jails-org/Components/master/riot-view/sample/index.htm)
+[Live demo](//rawgit.com/jails-org/Components/jquery/zepto/riot-view/sample/index.htm)
 
 ## Markup
 
