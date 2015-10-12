@@ -1,13 +1,1 @@
-# Components
-
-> This is the Template for all Jails components projects
-
-You can create your own Components repository and help the Jails community to be great!
-
-You just have to:
-
-1. Clone this repository
-2. Use the existing files to scaffold your own project and  follow the templates standards.
-3. Share with us!
-
-And be sure that you're creating a repository with a different purposes, always prefer to help the existing repositories instead of create a new one that makes exactly the same thing.
+![Components](http://jails-org.github.io/Jails/assets/images/components.png?v1)

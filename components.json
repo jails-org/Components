@@ -1,10 +1,10 @@
 {
 	"items" :[
 		{
-			"name" :"component",
-			"authors":["Your Name", "Other Guy"],
-			"description" :"A simple template for a component",
-			"section" :"sample"
+			"name" :"view",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"A powerfull component for rendering views, supports all mustache methods, template includes, html templating, filters and string formatting.",
+			"section" :"view"
 		}
 	]
 }

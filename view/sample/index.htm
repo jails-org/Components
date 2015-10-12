@@ -2,7 +2,7 @@
 <html class="no-js" lang="en-US">
 	<head>
 
-		<title>Jails - {{Component}}</title>
+		<title>Jails - View</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="icon" href="assets/images/favicon.png">
 
@@ -41,9 +41,30 @@
 			</header>
 
 			<section>
+
 				<h2>My sample goes here</h2>
-				<p data-component="my-component"></p>
+
+				<section data-component="view">
+					<ul data-each="radios">
+						<li class="{{classname}}">
+							<input type="radio" name="flavor" value="{{value}}" {{state}} id="flavor-{{value}}" />
+							<label for="flavor-{{value}}" data-value="label">Carregando....</label>
+						</li>
+					</ul>
+				</section>
+
 			</section>
+
+			<script type="x-tmpl-mustache" id="tpl-author">
+				<p>{{name}}</p>
+				<p>{{lastname}}</p>
+			</script>
+
+			<script type="x-tmpl-mustache" id="tpl-card">
+				<div>
+					{{>author}}
+				</div>
+			</script>
 
 		</main>
 
