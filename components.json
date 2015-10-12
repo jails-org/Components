@@ -1,4 +1,11 @@
 {
+	"element":{
+		"classname" :"components",
+		"title" :"Co",
+		"name"	:"Component",
+		"description":"Atoms &amp; Molecules",
+		"package":"comps"
+	},
 	"items" :[
 		{
 			"name" :"view",
