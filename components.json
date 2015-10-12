@@ -4,6 +4,7 @@
 			"name" :"view",
 			"authors":["Eduardo Ottaviani"],
 			"description" :"A powerfull component for rendering views, supports all mustache methods, template includes, html templating, filters and string formatting.",
+			"demo" :"http://codepen.io/Javiani/pen/Gpvyrq",
 			"section" :"view"
 		}
 	]
