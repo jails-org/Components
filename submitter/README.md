@@ -1,6 +1,6 @@
 # submitter
 
->The official Jails view component, handles templating and rendering html code.
+>A post event emitter for Forms, sending all data as json or a serialized string.
 
 >**Version** :`0.1.0`
 
@@ -11,56 +11,22 @@
 
 ---
 
-The `view` component is a wrapper for `Mustache` template engine.
+The `submitter` is very useful and help us to not repeat ourselves by:
 
-- The view accepts `object` models and also `promises` aswell.
-- Scans all the template tags from the page and stores it.
-- Support filter and transformation methods
-- And also template imports.
+- Preventing default Form behavior on submit.
+- Serializes it's data to string serialize format and json parameters.
 
 ## Markup
 
 ```html
-<section data-component="view"></section>
+<form data-component="submitter"></form>
 ```
-
-Using templates:
-```html
-<script type="x-tmpl-mustache" id="tpl-card">
-	<div class="card">
-		{{>author}}
-	</div>
-</script>
-<script type="x-tmpl-mustache" id="tpl-author">
-	<p>{{name}}</p>
-	<p>{{lastname}}</p>
-</script>
-
-```
-
-Using html:
-```html
-<div class="card">
-	{{>author}}
-</div>
-<!--or-->
-<div class="card">
-	<p data-value="name"></p>
-	<p data-value="lastname"></p>
-</div>
-```
-
-HTML templating uses `data` attributes to call mustache methods.
-- `data-each` : Loops over a model's property. Uses first child of that element to be the item's template.
-- `data-if` :Display html element if model property is `truthy`.
-- `data-not`:Display html element if model property is `falsy` or not present.
-- `data-value`: Performs .innerHTML in the html element with property value.
 
 ## Annotations
 
 ```html
-<!--@view({ debug :Boolean, template :String })-->
-<section data-component="my-component" />
+<!--@submitter({ emit :String })-->
+<form data-component="submitter" />
 ```
 
 ## Optionals
@@ -68,107 +34,43 @@ HTML templating uses `data` attributes to call mustache methods.
 If your component has markup or default parameters, you can use a simple table to show them.
 
 | options	   |	 default	  |		values   |
-|:--------------|:----------------:|:------------
-| data-debug    |	false		  |  `boolean`   |
-| data-template |	null		  |  `string`    |
+|:--------------|:---------------:|:------------
+| data-submitter-emit |	'post'	  |  `string`    |
 
-- data-debug : console logs the generated template.
-- data-template : Points to a mustache template in the page.
+- data-submitter-emit : Set's the emit event for each form you have in the page, if not set, it emits `submitter.post`.
 
-## Instance Methods
-
-### .render
-	.render( Object | Promise );
-
-Merge model with html template and renders the result. Accepts a plain `Object` and also a `Promise`. In the Promises case, it will render after promise is **done**.
-
----
-
-## Static Methods
-
-### .format
-	.format( String, Function );
-
-Register a function to be used on string formatting.
-Considering a `uppercase` format created, you can use it like this:
-
-```js
-
-define([
-    'view'
-], function(view){
-    view.format('uppercase', function(text){
-        return text.toUpperCase();
-    });
-});
-```
+## Usage
 
 ```html
-//Using template
-{{#uppercase}}Some text{{/uppercase}}
-
-//Using html template, considering firstname as data
-<p data-value="firstname:uppercase"></p>
-
+<form data-component="submitter">
+	<input type="hidden" name="username" value="Mario" />
+	<input type="hidden" name="lastname" value="Bros" />
+	<button>Send</button>
+</form>
 ```
 
-### .filter
-	.filter( String, Function );
-
-Register a function that can transform model data into something useful to rendering process.
-
-Consider the following model:
-
-```js
-Model :	{
-	items :[
-			{ label: 'Chocolate', selected :true, value :1 },
-			{ label: 'Vanilla', selected:false, value :2 },
-			{ label: 'Strawberry', selected :false, value :3 }
-	]
-}
-```
-
-If you want to trasform data which is relevant for UI purposes,
-then it's reasonable to do that on view instead of your model.
-
-In this particular case, we want to show radios, so we need `checked` instead of `selected`, also,
-we want to display a css class to the parent node when it's on active state.
+Listening submitter event using a Controller.
+Controller will log after a submit call, when user clicks the `Send` button.
 
 ```js
 define([
-    'view'
-], function(view){
+	'jails',
+	'comps/submitter/submitter'
+], function(jails, submitter){
 
-	view.filter('radios', function( model ){
+	jails.controller('my-controller', function(html, data){
 
-		var newitems = [];
+		this.init = function(){
+			this.listen('submitter:post', log);
+		};
 
-		model.items.forEach(function(item){
-			newitems.push({
-				classname :item.selected? 'active' :'',
-				state	  :item.selected? 'checked':'',
-				label	  :item.label,
-				value     :item.value
-			});
-		});
-
-		return newitems;
+		function log(e, formdata){
+			console.log( formdata );
+			/*{
+				params :{ username:'Mario', lastname :'Bros' },
+				serialize :'username=Mario&lastname=Bros'
+			}*/
+		}
 	});
-
 });
-```
-
-Now, on template, instead of looping each `items` we loop over `radios` filters.
-With that we can solve UI issues outside our Models classes, allows us to avoid to create unnecessary models to deal with UI states and also helps us to keep the `json` data simplified.
-
-```html
-<section data-component="view">
-	<ul data-each="radios">
-		<li class="{{classname}}">
-			<input type="radio" name="flavor" value="{{value}}" {{state}} id="flavor-{{value}}" />
-			&nbsp;<label for="flavor-{{value}}" data-value="label">Carregando....</label>
-		</li>
-	</ul>
-</section>
 ```
