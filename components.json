@@ -3,7 +3,7 @@
 		"classname" :"components",
 		"title" :"Co",
 		"name"	:"Component",
-		"description":"Atoms &amp; Molecules",
+		"description":"Atoms & Molecules",
 		"package":"comps"
 	},
 	"items" :[
