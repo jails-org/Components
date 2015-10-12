@@ -8,7 +8,7 @@
 
 >**Author**: [Eduardo Ottaviani](//github.com/javiani)
 
->**Sample**: [Demo](//rawgit.com/jails-org/Components/master/my-component/sample/index.htm)
+>**Sample**: [Codepen](//codepen.io/Javiani/pen/Gpvyrq)
 
 
 ---
