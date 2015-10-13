@@ -6,7 +6,7 @@
 
 >**Author**: [Eduardo Ottaviani](//github.com/javiani)
 
->**Sample**: [Codepen](//codepen.io/Javiani/pen/Gpvyrq)
+>**Sample**: [Codepen](//codepen.io/Javiani/pen/BodxKQ)
 
 
 ---
