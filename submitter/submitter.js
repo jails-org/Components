@@ -25,7 +25,7 @@ define([
 
 	function create( elements ){
 		var len = elements.length, params = {}, serialize = [];
-		for(var i = 0, el = elements[i]; i < len; i++){
+		for(var i = 0, el = elements[i]; i < len; i++, el = elements[i]){
 			if(el.name){
 				params[el.name] = el.value;
 				serialize.push([ el.name, el.value ].join('='));
