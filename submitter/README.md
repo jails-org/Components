@@ -6,7 +6,7 @@
 
 >**Author**: [Eduardo Ottaviani](//github.com/javiani)
 
->**Sample**: [Codepen](//codepen.io/Javiani/pen/BodxKQ)
+>**Sample**: [Plunker](//plnkr.co/edit/JWaZTKp90R1hNOwDJ9cr)
 
 
 ---
