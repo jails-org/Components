@@ -15,6 +15,12 @@
 			"section" :"view"
 		},
 		{
+			"name" :"litemodal",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"A huge advantage on using this css based project is the fact that the holder is not detached from the DOM, So it will keep all the events and state of your dialog window.",
+			"section" :"view"
+		},
+		{
 			"name" :"submitter",
 			"authors":["Eduardo Ottaviani"],
 			"description" :"A post event emitter for Forms, sending all data as json or a serialized string.",
