@@ -26,6 +26,12 @@
 			"description" :"A post event emitter for Forms, sending all data as json or a serialized string.",
 			"demo" :"//codepen.io/Javiani/pen/BodxKQ",
 			"section" :"form"
+		},
+		{
+			"name" :"autopost",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"This component can be used on forms that don't have a button but needs to be submitted.",
+			"section" :"form"
 		}
 	]
 }
