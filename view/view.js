@@ -29,6 +29,7 @@ define([
 			}else{
 				newmodel = extend( View.filters, model );
 				newmodel = extend( View.formats, newmodel );
+
 				html.innerHTML = mustache.render( template, newmodel, View.templates );
 				jails.refresh( html );
 			}
@@ -119,7 +120,7 @@ define([
 				if( key ) attributes += (key + '=\"' + o[key] + '\" ');
 			});
 			return attributes;
-		}).trim().replace(/\t|\n/g, ''));
+		}).replace(/\t|\n/g, ''));
 	};
 
 	Util = {
@@ -127,7 +128,7 @@ define([
 		decode :function( string ){
 			var t = this.textarea;
 			t.innerHTML = string;
-			return t.value;
+			return string;
 		}
 	};
 
@@ -149,7 +150,6 @@ define([
 	}
 
 	function each(args, fn){
-		args = Array.prototype.slice.call(args);
 		var len = args.length;
 		for( var i = 0; i < len; i++ ) fn.call( args[i], i );
 	}

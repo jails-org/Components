@@ -10,7 +10,7 @@ define([
 
 		this.init = function(){
 			action = ann.emit || form.getAttribute('data-submitter-emit') || 'post';
-			form.addEventListener('submit', callback);
+			this.on('submit', callback);
 		};
 
 		function callback( e ){
