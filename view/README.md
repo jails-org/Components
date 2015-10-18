@@ -2,7 +2,7 @@
 
 >The official Jails view component, handles templating and rendering html code.
 
->**Version** :`0.1.0`
+>**Version** :`0.1.1`
 
 >**Dependencies**: `mustache`
 

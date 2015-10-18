@@ -47,9 +47,7 @@ define([
 	};
 
 	View.filter = function(name, method){
-		return View.filters[name] = function(){
-			return method.call(this, this, name);
-		};
+		return View.filters[name] = method;
 	};
 
 	View.format = function(name, method){
