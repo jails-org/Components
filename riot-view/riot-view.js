@@ -46,6 +46,7 @@ define([
 				model.done(function(m){ instance.update(m); });
 			else
 				instance.update( model );
+			jails.refresh(element);
 		}
 
 		function set(){
