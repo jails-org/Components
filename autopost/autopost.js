@@ -18,7 +18,7 @@ define([
 		};
 
 		function post(){
-			this.form.submit();
+			cp.trigger(this.form, 'submit');
 		}
 	});
 });
