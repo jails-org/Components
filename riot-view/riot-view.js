@@ -12,7 +12,7 @@ define([
 
 	return jails.component('riot-view', function( element, anno ){
 
-		var instance, tag, cp;
+		var instance, tag, cp, tpl;
 
 		cp		= this;
 		tpl 	= element.getAttribute('data-template');
