@@ -2,7 +2,7 @@
 
 >Trigger form submit event on a given event and target settings.
 
->**Version** :`0.1.0`
+>**Version** :`0.1.1`
 
 >**Author**: [Eduardo Ottaviani](//github.com/javiani)
 

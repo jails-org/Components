@@ -21,7 +21,7 @@ define([
 
 		this.init = function(){
 
-			tpl = tpl? element.querySelector(tpl).innerHTML :element.innerHTML;
+			tpl = tpl? document.querySelector(tpl).innerHTML :element.innerHTML;
 			element.setAttribute( 'riot-tag', tag );
 			clone.innerHTML = tpl;
 			riot.tag( tag, template( clone ), set );
