@@ -1,10 +1,10 @@
 # riot-view
 
->A wrapper Component for templates using the power of excellent Riot.js library.
+>A wrapper Component for templates using the power of excellent Riot.js Virtual DOM library.
 
 >**Dependencies** :`riot.js`
 
->**Version** :`0.1.1`
+>**Version** :`0.1.2`
 
 >**Author**: [Eduardo Ottaviani](//github.com/Javiani)
 
@@ -34,15 +34,10 @@ The `riot-view` component extend the template view with new features.
 
 # Methods
 
-### .update
+### .update / .render
 	.update( Object | Promise );
 
 Merge model with html template and renders the result. Accepts a plain `Object` and also a `Promise`. In the Promises case, it will render after promise is **done**.
-
-### .empty
-	.empty();
-
-Removes all the child nodes from the view, same as `jQuery.empty()`.;
 
 
 ### Markup
@@ -56,10 +51,9 @@ Removes all the child nodes from the view, same as `jQuery.empty()`.;
 ```js
 define([
 
-	'jails',
-	'jriot'
+	'jails'
 
-], function( jails, jriot ){
+], function( jails ){
 
 	return jails.controller('todo', function( element, anno, opts ){
 

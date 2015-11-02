@@ -8,6 +8,13 @@
 	},
 	"items" :[
 		{
+			"name" :"riot-view",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"A wrapper Component for templates using the power of excellent Riot.js Virtual DOM library.",
+			"demo" :"//rawgit.com/jails-org/Demos/master/TodoMVC/index.htm",
+			"section" :"view"
+		},
+		{
 			"name" :"view",
 			"authors":["Eduardo Ottaviani"],
 			"description" :"A powerfull component for rendering views, supports all mustache methods, template includes, html templating, filters and string formatting.",
@@ -32,6 +39,12 @@
 			"authors":["Eduardo Ottaviani"],
 			"description" :"This component can be used on forms that don't have a button but needs to be submitted.",
 			"section" :"form"
+		},
+		{
+			"name" :"selectable",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"This component can be used on forms that don't have a button but needs to be submitted.",
+			"section" :"ui"
 		}
 	]
 }

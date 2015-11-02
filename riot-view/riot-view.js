@@ -36,10 +36,7 @@ define([
 			update( model );
 		};
 
-		this.empty = function(){
-			while( element.firstChild ) element.removeChild( element.firstChild );
-			return cp;
-		};
+		this.render = this.update;
 
 		function update( model ){
 			if( model.done )
