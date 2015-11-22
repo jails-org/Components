@@ -8,6 +8,13 @@
 	},
 	"items" :[
 		{
+			"name" :"_view",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"This component is just a wrapper that renders views using underscore templating system. You can use this component to render views if you're using underscore on your project instead of other template engines such as mustache.",
+			"demo" :"//rawgit.com/jails-org/Demos/master/TodoMVC/index.htm",
+			"section" :"view"
+		},
+		{
 			"name" :"riot-view",
 			"authors":["Eduardo Ottaviani"],
 			"description" :"A wrapper Component for templates using the power of excellent Riot.js Virtual DOM library.",
