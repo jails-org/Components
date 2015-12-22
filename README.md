@@ -1,1 +1,1 @@
-[![Components](http://jails-org.github.io/Jails/assets/images/components.png?v1.0)](//jails-org.github.io/Jails/index.htm?branch=master)
+[![Components](http://jails-org.github.io/Jails/app/images/components.png?v1.0)](//jails-org.github.io/Jails/components.htm?branch=master)
