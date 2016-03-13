@@ -39,6 +39,7 @@ define([
 		this.render = this.update;
 
 		function update( model ){
+			model = model || {};
 			if( model.done )
 				model.done(function(m){ instance.update(m); });
 			else
