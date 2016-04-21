@@ -44,6 +44,12 @@
 			"section" :"form"
 		},
 		{
+			"name" :"validation",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"This component uses validator AMD module and generates dynamically validation rules by using html markup definitions",
+			"section" :"form"
+		},
+		{
 			"name" :"selectable",
 			"authors":["Eduardo Ottaviani"],
 			"description" :"This component can be used on forms that don't have a button but needs to be submitted.",
