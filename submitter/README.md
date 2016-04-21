@@ -6,9 +6,6 @@
 
 >**Author**: [Eduardo Ottaviani](//github.com/javiani)
 
->**Sample**: [Plunker](//plnkr.co/edit/JWaZTKp90R1hNOwDJ9cr)
-
-
 ---
 
 The `submitter` is very useful and help us to not repeat ourselves by:
