@@ -15,8 +15,8 @@ define([
 			w 			= window;
 
 		this.init = function(){
-			addEvent();
 			interval = setInterval(watch, 300);
+			jails.events.on('resize', update)
 		};
 
 		function watch() {
@@ -26,14 +26,6 @@ define([
 				self.emit('visible', element);
 				if (element.className.indexOf(activeClass) !== -1) { return; }
 				element.className = element.className + ' ' + activeClass;
-			}
-		}
-
-		function addEvent() {
-			if (w.attachEvent) {
-				w.attachEvent('onresize', update);
-			} else if(w.addEventListener) {
-				w.addEventListener('resize', update, true);
 			}
 		}
 
