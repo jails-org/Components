@@ -40,8 +40,8 @@ define([
 
 		function update( model ){
 			model = model || {};
-			if( model.done )
-				model.done(function(m){ instance.update(m); });
+			if( model.then )
+				model.then(function(m){ instance.update(m); });
 			else
 				instance.update( model );
 			jails.refresh(element);
