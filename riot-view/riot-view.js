@@ -5,38 +5,34 @@ define([
 
 ], function( jails, riot ){
 
-	//@static
 	var id = 0,
 		slice = Array.prototype.slice,
 		clone = document.createElement('div');
 
-	return jails.component('riot-view', function( element, anno ){
+	return jails('view', function( component, element, anno ){
 
-		var instance, tag, cp, tpl;
+		var instance, tag, tpl;
 
-		cp		= this;
 		tpl 	= element.getAttribute('data-template');
 		tag 	= element.getAttribute('riot-tag');
 		tag 	= tag || ('riot-view-' + (id++));
 
-		this.init = function(){
+		component.init = function(){
 
 			tpl = tpl? document.querySelector(tpl).innerHTML :element.innerHTML;
 			element.setAttribute( 'riot-tag', tag );
 			clone.innerHTML = tpl;
 			riot.tag( tag, template( clone ), set );
 
-			return cp;
+			return component;
 		};
 
-		this.update = function( model ){
+		component.update = function( model ){
 
 			riot.mount( element );
-			cp.update = update;
+			component.update = update;
 			update( model );
 		};
-
-		this.render = this.update;
 
 		function update( model ){
 			model = model || {};

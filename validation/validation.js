@@ -7,11 +7,11 @@ define([
 
 ], function( jails, validator ){
 
-	jails.component('validation', function( form, anno ){
+	return jails('validation', function( component, form, anno ){
 
-		var cp = this, rules, instance;
+		var rules, instance;
 
-		this.init = function(){
+		component.init = function(){
 
 			rules = get_rules( form, anno );
 			instance = validator.create({ holder :$(form) });
@@ -20,19 +20,19 @@ define([
 			instance.on('validator.success', success);
 			instance.on('validator.error', error);
 
-			this.on('submit', post);
+			component.on('submit', post);
 		};
 
-		this.set = function( fn ){
+		component.set = function( fn ){
 			fn.call( cp, instance );
 		};
 
 		function success(){
-			cp.emit('success');
+			component.emit('success');
 		}
 
 		function error(err){
-			cp.emit('error', err);
+			component.emit('error', err);
 		}
 
 		function post(e){
