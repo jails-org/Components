@@ -14,6 +14,12 @@
 			"section" :"view"
 		},
 		{
+			"name" :"router-view",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"Switch view content accordingly with URL path",
+			"section" :"view"
+		},
+		{
 			"name" :"submitter",
 			"authors":["Eduardo Ottaviani"],
 			"description" :"A post event emitter for Forms, sending all data as json or a serialized string.",
