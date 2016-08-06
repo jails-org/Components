@@ -55,10 +55,10 @@ define([
 	'comps/submitter/submitter'
 ], function(jails, submitter){
 
-	jails.controller('my-controller', function(html, data){
+	jails('my-component', function( component, html, data){
 
-		this.init = function(){
-			this.listen('submitter:post', log);
+		component.init = function(){
+			component.listen('submitter:post', log);
 		};
 
 		function log(e, formdata){
