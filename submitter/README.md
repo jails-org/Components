@@ -46,8 +46,8 @@ If your component has markup or default parameters, you can use a simple table t
 </form>
 ```
 
-Listening submitter event using a Controller.
-Controller will log after a submit call, when user clicks the `Send` button.
+Listening submitter event using a Component.
+*my-component* will log after a submit call, when user clicks the `Send` button.
 
 ```js
 define([
@@ -55,7 +55,7 @@ define([
 	'comps/submitter/submitter'
 ], function(jails, submitter){
 
-	jails('my-component', function( component, html, data){
+	jails('my-component', function( component, html, anno ){
 
 		component.init = function(){
 			component.listen('submitter:post', log);
