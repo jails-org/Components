@@ -2,7 +2,7 @@
 
 >A post event emitter for Forms, sending all data as json or a serialized string.
 
->**Version** :`0.1.0`
+>**Version** :`1.0.0`
 
 >**Author**: [Eduardo Ottaviani](//github.com/javiani)
 

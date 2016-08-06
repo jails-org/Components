@@ -4,7 +4,7 @@
 
 >**Dependencies** : `validator`, `validator.messages`, `validator.rules`
 
->**Version** :`0.1.0`
+>**Version** :`1.0.0`
 
 >**Author**: [Eduardo Ottaviani](//github.com/javiani)
 

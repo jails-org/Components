@@ -1,10 +1,10 @@
-# riot-view
+# view 
 
 >A wrapper Component for templates using the power of excellent Riot.js Virtual DOM library.
 
 >**Dependencies** :`riot.js`
 
->**Version** :`0.1.2`
+>**Version** :`1.0.0`
 
 >**Author**: [Eduardo Ottaviani](//github.com/Javiani)
 
