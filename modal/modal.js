@@ -28,11 +28,11 @@ define([
 		};
 
 		function outside(e){
-			if(e.target == element) cp.close();
+			if(e.target == element) component.close();
 		}
 
 		function esc(e){
-			if(e.which == 27) cp.close();
+			if(e.which == 27) component.close();
 		}
 	});
 });
