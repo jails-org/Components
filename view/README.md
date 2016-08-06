@@ -26,7 +26,7 @@ This is a huge improvement on performance on your applications.
 # Templating
 
 Riot.js give us a few directives on html to loop and print data. `if`, `each` and `{}`.
-The `riot-view` component extend the template view with new features.
+The `view` component extend the template view with new features.
 
 1. View will not be updated once the tag is mounted by riot. This is specially useful when your view already have relevant data printed by server-side. So you have to clear-up component before an initial .update() call.
 2. `data-value`,  a lazy expression evaluation. `<p data-value="{name}" />` will be replaced by `<p>{name}</p>` in memory and will be replaced after the first `.update()` call. This is also a practical explanation for the item `1`.
@@ -34,7 +34,7 @@ The `riot-view` component extend the template view with new features.
 
 # Methods
 
-### .update / .render
+### .update
 	.update( Object | Promise );
 
 Merge model with html template and renders the result. Accepts a plain `Object` and also a `Promise`. In the Promises case, it will render after promise is **done**.
@@ -43,7 +43,7 @@ Merge model with html template and renders the result. Accepts a plain `Object` 
 ### Markup
 
 ```js
-<section data-component="riot-view" />
+<section data-component="view" />
 ```
 
 ### JS using a Controller
@@ -55,11 +55,11 @@ define([
 
 ], function( jails ){
 
-	return jails.controller('todo', function( element, anno, opts ){
+	return jails('todo', function( component, element, anno ){
 
 		var view;
-		this.init = function(){
-			view = this.x('[data-component*=riot-view]');
+		component.init = function(){
+			view = component.get('[data-component*=view]');
 			view('update', {});
 		};
 	});
