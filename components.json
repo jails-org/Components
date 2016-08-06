@@ -20,6 +20,12 @@
 			"section" :"view"
 		},
 		{
+			"name" :"modal",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"A component to open and close `modal` window.",
+			"section" :"view"
+		},
+		{
 			"name" :"submitter",
 			"authors":["Eduardo Ottaviani"],
 			"description" :"A post event emitter for Forms, sending all data as json or a serialized string.",
