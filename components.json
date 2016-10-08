@@ -20,6 +20,12 @@
 			"section" :"view"
 		},
 		{
+			"name" :"visibility",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"Triggers an event when html element is visible in the viewport",
+			"section" :"view"
+		},
+		{
 			"name" :"modal",
 			"authors":["Eduardo Ottaviani"],
 			"description" :"A component to open and close `modal` window.",
