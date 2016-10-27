@@ -24,7 +24,7 @@ define([
 		};
 
 		component.set = function( fn ){
-			fn.call( cp, instance );
+			fn.call( component, instance );
 		};
 
 		function success(){
