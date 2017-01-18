@@ -1,174 +1,72 @@
-# view
+# view 
 
->The official Jails view component, handles templating and rendering html code.
+>A wrapper Component for templates using the power of excellent Riot.js Virtual DOM library.
 
->**Version** :`0.1.1`
+>**Dependencies** :`riot.js`
 
->**Dependencies**: `mustache`
+>**Version** :`1.0.0`
 
->**Author**: [Eduardo Ottaviani](//github.com/javiani)
+>**Author**: [Eduardo Ottaviani](//github.com/Javiani)
 
+>**Demo**: [TodoMVC](//rawgit.com/jails-org/Demos/master/TodoMVC/index.htm)
 
 ---
 
-The `view` component is a wrapper for `Mustache` template engine.
+Riot.js is one of the best micro-libraries out there, and you can use all the power of virtual dom of it on your `views`.
 
-- The view accepts `object` models and also `promises` aswell.
-- Scans all the template tags from the page and stores it.
-- Support filter and transformation methods
-- And also template imports.
+This is an alternative for the default `view` Jails component.
 
-## Markup
+[![Riot](http://javiani.files.wordpress.com/2015/06/screen-shot-2015-06-20-at-12-58-18.png)](//muut.com/riotjs/)
 
-```html
-<section data-component="view"></section>
-```
+# Virtual DOM
 
-Using templates:
-```html
-<script type="x-tmpl-mustache" id="tpl-card">
-	<div class="card">
-		{{>author}}
-	</div>
-</script>
-<script type="x-tmpl-mustache" id="tpl-author">
-	<p>{{name}}</p>
-	<p>{{lastname}}</p>
-</script>
+Riot.js implements Virtual DOM technique which means that you're view should only update what is changed.
+This is a huge improvement on performance on your applications.
 
-```
+# Templating
 
-Using html:
-```html
-<div class="card">
-	{{>author}}
-</div>
-<!--or-->
-<div class="card">
-	<p data-value="name"></p>
-	<p data-value="lastname"></p>
-</div>
-```
+Riot.js give us a few directives on html to loop and print data. `if`, `each` and `{}`.
+The `view` component extend the template view with new features.
 
-HTML templating uses `data` attributes to call mustache methods.
-- `data-each` : Loops over a model's property. Uses first child of that element to be the item's template.
-- `data-if` :Display html element if model property is `truthy`.
-- `data-not`:Display html element if model property is `falsy` or not present.
-- `data-value`: Performs .innerHTML in the html element with property value.
+1. View will not be updated once the tag is mounted by riot. This is specially useful when your view already have relevant data printed by server-side. So you have to clear-up component before an initial .update() call.
+2. `data-value`,  a lazy expression evaluation. `<p data-value="{name}" />` will be replaced by `<p>{name}</p>` in memory and will be replaced after the first `.update()` call. This is also a practical explanation for the item `1`.
+3. `data-template`, points to a script tag instead to be used as template. `data-template="#my-template"`.
 
-## Annotations
+# Methods
 
-```html
-<!--@view({ debug :Boolean, template :String })-->
-<section data-component="my-component" />
-```
-
-## Optionals
-
-If your component has markup or default parameters, you can use a simple table to show them.
-
-| options	   |	 default	  |		values   |
-|:--------------|:----------------:|:------------
-| data-debug    |	false		  |  `boolean`   |
-| data-template |	null		  |  `string`    |
-
-- data-debug : console logs the generated template.
-- data-template : Points to a mustache template in the page.
-
-## Instance Methods
-
-### .render
-	.render( Object | Promise );
+### .update
+	.update( Object | Promise );
 
 Merge model with html template and renders the result. Accepts a plain `Object` and also a `Promise`. In the Promises case, it will render after promise is **done**.
 
----
 
-## Static Methods
-
-### .format
-	.format( String, Function );
-
-Register a function to be used on string formatting.
-Considering a `uppercase` format created, you can use it like this:
+### Markup
 
 ```js
-
-define([
-    'view'
-], function(view){
-    view.format('uppercase', function(text){
-        return text.toUpperCase();
-    });
-});
+<section data-component="view" />
 ```
 
-```html
-//Using template
-{{#uppercase}}Some text{{/uppercase}}
-
-//Using html template, considering firstname as data
-<p data-value="firstname:uppercase"></p>
-
-```
-
-### .filter
-	.filter( String, Function );
-
-Register a function that can transform model data into something useful to rendering process.
-
-Consider the following model:
-
-```js
-Model :	{
-	items :[
-			{ label: 'Chocolate', selected :true, value :1 },
-			{ label: 'Vanilla', selected:false, value :2 },
-			{ label: 'Strawberry', selected :false, value :3 }
-	]
-}
-```
-
-If you want to trasform data which is relevant for UI purposes,
-then it's reasonable to do that on view instead of your model.
-
-In this particular case, we want to show radios, so we need `checked` instead of `selected`, also,
-we want to display a css class to the parent node when it's on active state.
+### JS using a Controller
 
 ```js
 define([
-    'view'
-], function(view){
 
-	view.filter('radios', function( model ){
+	'jails'
 
-		var newitems = [];
+], function( jails ){
 
-		model.items.forEach(function(item){
-			newitems.push({
-				classname :item.selected? 'active' :'',
-				state	  :item.selected? 'checked':'',
-				label	  :item.label,
-				value     :item.value
-			});
-		});
+	return jails('todo', function( component, element, anno ){
 
-		return newitems;
+		var view;
+		component.init = function(){
+			view = component.get('[data-component*=view]');
+			view('update', {});
+		};
 	});
-
 });
+
 ```
 
-Now, on template, instead of looping each `items` we loop over `radios` filters.
-With that we can solve UI issues outside our Models classes, allows us to avoid to create unnecessary models to deal with UI states and also helps us to keep the `json` data simplified.
+## More information
 
-```html
-<section data-component="view">
-	<ul data-each="radios">
-		<li class="{{classname}}">
-			<input type="radio" name="flavor" value="{{value}}" {{state}} id="flavor-{{value}}" />
-			&nbsp;<label for="flavor-{{value}}" data-value="label">Carregando....</label>
-		</li>
-	</ul>
-</section>
-```
+If you need more information about Riot.js, I really recommend you to visit [Riot's site](//riotjs.com/).

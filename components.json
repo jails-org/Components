@@ -8,27 +8,27 @@
 	},
 	"items" :[
 		{
-			"name" :"_view",
-			"authors":["Eduardo Ottaviani"],
-			"description" :"This component is just a wrapper that renders views using underscore templating system. You can use this component to render views if you're using underscore on your project instead of other template engines such as mustache.",
-			"section" :"view"
-		},
-		{
-			"name" :"riot-view",
+			"name" :"view",
 			"authors":["Eduardo Ottaviani"],
 			"description" :"A wrapper Component for templates using the power of excellent Riot.js Virtual DOM library.",
 			"section" :"view"
 		},
 		{
-			"name" :"view",
+			"name" :"router-view",
 			"authors":["Eduardo Ottaviani"],
-			"description" :"A powerfull component for rendering views, supports all mustache methods, template includes, html templating, filters and string formatting.",
+			"description" :"Switch view content accordingly with URL path",
 			"section" :"view"
 		},
 		{
-			"name" :"litemodal",
+			"name" :"visibility",
 			"authors":["Eduardo Ottaviani"],
-			"description" :"A huge advantage on using this css based project is the fact that the holder is not detached from the DOM, So it will keep all the events and state of your dialog window.",
+			"description" :"Triggers an event when html element is visible in the viewport",
+			"section" :"view"
+		},
+		{
+			"name" :"modal",
+			"authors":["Eduardo Ottaviani"],
+			"description" :"A component to open and close `modal` window.",
 			"section" :"view"
 		},
 		{
@@ -38,22 +38,10 @@
 			"section" :"form"
 		},
 		{
-			"name" :"autopost",
-			"authors":["Eduardo Ottaviani"],
-			"description" :"This component can be used on forms that don't have a button but needs to be submitted.",
-			"section" :"form"
-		},
-		{
 			"name" :"validation",
 			"authors":["Eduardo Ottaviani"],
 			"description" :"This component uses validator AMD module and generates dynamically validation rules by using html markup definitions",
 			"section" :"form"
-		},
-		{
-			"name" :"selectable",
-			"authors":["Eduardo Ottaviani"],
-			"description" :"This component can be used on forms that don't have a button but needs to be submitted.",
-			"section" :"ui"
 		}
 	]
 }

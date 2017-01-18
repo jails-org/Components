@@ -4,7 +4,7 @@
 
 >**Dependencies** : `validator`, `validator.messages`, `validator.rules`
 
->**Version** :`0.1.0`
+>**Version** :`1.0.0`
 
 >**Author**: [Eduardo Ottaviani](//github.com/javiani)
 
@@ -48,16 +48,16 @@ define([
 
 ], function( jails ){
 
-	jails.controller('my-controller', function(html, data){
+	jails('component-a', function(component, html, data){
 
 		var validator;
 		var validation = this.x('[data-component*=validation]')
 
-		this.init = function(){
+		component.init = function(){
 
 			validation('set', set);
-			this.listen('validation:success', success);
-			this.listen('validation:error', error);
+			component.listen('validation:success', success);
+			component.listen('validation:error', error);
 		};
 
 		function set( instance ){

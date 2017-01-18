@@ -4,13 +4,13 @@ define([
 
 ], function( jails ){
 
-	var submitter = jails.component('submitter', function( form, ann ){
+	var submitter = jails('submitter', function( component, form, ann ){
 
-		var cp = this, action;
+		var action;
 
-		this.init = function(){
+		component.init = function(){
 			action = ann.emit || form.getAttribute('data-submitter-emit') || 'post';
-			this.on('submit', callback);
+			component.on('submit', callback);
 		};
 
 		function callback( e ){
@@ -19,7 +19,7 @@ define([
 		}
 
 		function emit( data ){
-			cp.emit( action, data );
+			component.emit( action, data );
 		}
 	});
 
@@ -27,8 +27,15 @@ define([
 		var len = elements.length, params = {}, serialize = [];
 		for(var i = 0, el = elements[i]; i < len; i++, el = elements[i]){
 			if(el.name){
-				params[el.name] = el.value;
-				serialize.push([ el.name, el.value ].join('='));
+				if( el.type && (el.type == 'checkbox' || el.type == 'radio' ) ){
+					if( el.checked ){
+						params[el.name] = el.value;
+						serialize.push([ el.name, el.value ].join('='));
+					}
+				}else{
+					params[el.name] = el.value;
+					serialize.push([ el.name, el.value ].join('='));
+				}
 			}
 		}
 		return { params :params, serialize :serialize.join('&') };

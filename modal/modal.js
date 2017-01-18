@@ -4,35 +4,35 @@ define([
 
 ], function( jails ){
 
-	return jails.component('litemodal', function(element, anno){
+	return jails('modal', function( component, element, anno ){
 
-		var cp = this, cssopen, cssclose;
+		var cssopen, cssclose;
 
-		this.init = function(){
+		component.init = function(){
 
 			cssopen = anno.open || element.getAttribute('data-litemodal-open') || 'open';
 			cssclose = anno.close || element.getAttribute('data-litemodal-close') || '.close';
 
-			this.on('click', cssclose, this.close);
-			this.on('click', outside);
+			component.on('click', cssclose, component.close);
+			component.on('click', outside);
 		};
 
-		this.open = function(){
+		component.open = function(){
 			element.className = element.className.replace(cssopen, '') + ' ' + cssopen;
 			jails.events.on(document, 'keyup', esc);
 		};
 
-		this.close = function(){
+		component.close = function(){
 			element.className = element.className.replace(cssopen, '');
 			jails.events.off(document, 'keyup', esc);
 		};
 
 		function outside(e){
-			if(e.target == element) cp.close();
+			if(e.target == element) component.close();
 		}
 
 		function esc(e){
-			if(e.which == 27) cp.close();
+			if(e.which == 27) component.close();
 		}
 	});
 });

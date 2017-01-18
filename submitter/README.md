@@ -2,7 +2,7 @@
 
 >A post event emitter for Forms, sending all data as json or a serialized string.
 
->**Version** :`0.1.0`
+>**Version** :`1.0.0`
 
 >**Author**: [Eduardo Ottaviani](//github.com/javiani)
 
@@ -46,8 +46,8 @@ If your component has markup or default parameters, you can use a simple table t
 </form>
 ```
 
-Listening submitter event using a Controller.
-Controller will log after a submit call, when user clicks the `Send` button.
+Listening submitter event using a Component.
+*my-component* will log after a submit call, when user clicks the `Send` button.
 
 ```js
 define([
@@ -55,10 +55,10 @@ define([
 	'comps/submitter/submitter'
 ], function(jails, submitter){
 
-	jails.controller('my-controller', function(html, data){
+	jails('my-component', function( component, html, anno ){
 
-		this.init = function(){
-			this.listen('submitter:post', log);
+		component.init = function(){
+			component.listen('submitter:post', log);
 		};
 
 		function log(e, formdata){
