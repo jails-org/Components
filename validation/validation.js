@@ -7,13 +7,13 @@ define([
 
 ], function( jails, validator ){
 
-	return jails('validation', function( component, form, anno ){
+	return jails('validation', function( component, form, props ){
 
-		var rules, instance;
+		var rules, instance, prop = props();
 
 		component.init = function(){
 
-			rules = get_rules( form, anno );
+			rules = get_rules( form, prop );
 			instance = validator.create({ holder :$(form) });
 
 			instance.add_all( add_all() );
@@ -52,10 +52,8 @@ define([
 
 	});
 
-	function get_rules( form, anno ){
-		return anno.rules ||
-			(form.getAttribute('data-validation-rules') || '')
-			.split(/\s/);
+	function get_rules( form, p ){
+		return p.rules || p.data.validationRules || ''.split(/\s/);
 	}
 
 });

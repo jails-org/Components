@@ -4,12 +4,12 @@ define([
 
 ], function( jails ){
 
-	var submitter = jails('submitter', function( component, form, ann ){
+	var submitter = jails('submitter', function( component, form, props ){
 
-		var action;
+		var action, prop = props();
 
 		component.init = function(){
-			action = ann.emit || form.getAttribute('data-submitter-emit') || 'post';
+			action = prop.emit || prop.data.submitterEmit || 'post';
 			component.on('submit', callback);
 		};
 

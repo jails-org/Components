@@ -4,14 +4,14 @@ define([
 
 ], function( jails ){
 
-	return jails('modal', function( component, element, anno ){
+	return jails('modal', function( component, element, props ){
 
-		var cssopen, cssclose;
+		var cssopen, cssclose, prop = props();
 
 		component.init = function(){
 
-			cssopen = anno.open || element.getAttribute('data-litemodal-open') || 'open';
-			cssclose = anno.close || element.getAttribute('data-litemodal-close') || '.close';
+			cssopen = prop.open || prop.data.litemodaOpen || 'open';
+			cssclose = prop.close || prop.data.litemodalClose || '.close';
 
 			component.on('click', cssclose, component.close);
 			component.on('click', outside);

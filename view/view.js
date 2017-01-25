@@ -9,17 +9,18 @@ define([
 		slice = Array.prototype.slice,
 		clone = document.createElement('div');
 
-	return jails('view', function( component, element, anno ){
+	return jails('view', function( component, element, props ){
 
-		var instance, tag, tpl;
+		var instance, tag, tpl, prop = props();
 
-		tpl 	= element.getAttribute('data-template');
-		tag 	= element.getAttribute('riot-tag');
+		tpl 	= prop.data.template || prop.template;
+		tag 	= prop.riotTag;
 		tag 	= tag || ('riot-view-' + (id++));
 
 		component.init = function(){
 
-			tpl = tpl? document.querySelector(tpl).innerHTML :element.innerHTML;
+			setTemplate();
+
 			element.setAttribute( 'riot-tag', tag );
 			clone.innerHTML = tpl;
 			riot.tag( tag, template( clone ), set );
@@ -45,6 +46,16 @@ define([
 
 		function set(){
 			instance = this;
+		}
+
+		function setTemplate(){
+			if( tpl ){
+				var aux = document.querySelector(tpl);
+				if( !aux ){ throw new Error('[view] - Template was not found.') }
+				else { tpl = aux.innerHTML; }
+			}else{
+				tpl = element.innerHTML;
+			}
 		}
 
 		function template( node ){
